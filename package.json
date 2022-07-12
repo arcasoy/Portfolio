@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site build to replace current Wix portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcasoy/Portfolio.git"
+  },
+  "author": "Alexander Arcasoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arcasoy/Portfolio/issues"
+  },
+  "homepage": "https://github.com/arcasoy/Portfolio#readme"
+}
