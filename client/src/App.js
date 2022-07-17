@@ -1,7 +1,6 @@
 import logo from './assets/logo.svg';
 import './assets/App.css';
 import './assets/global.css'
-import { Route, Routes } from "react-router-dom"
 
 import Navbar from './components/Navbar'
 
@@ -23,14 +22,11 @@ function App() {
         >
           Learn React
         </a>
-        <Routes>
-          <Route/>
-        </Routes>
-        <h1>Home</h1>
-        <p>{ '\n' }</p>
-        <h1>Resume</h1>
-        <h1>Portfolio</h1>
-        <h1>Contact</h1>
+        <h1 id = 'home'>Home</h1>
+        <h1 id = 'resume'>Resume</h1>
+        <h1 id = 'portfolio'>Portfolio</h1>
+        <h1 id = 'contact'>Contact</h1>
+        <h1 id = 'stay-updated'>Stay Updated</h1>
       </header>
     </div>
     </>
