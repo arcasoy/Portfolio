@@ -24,7 +24,7 @@ function App() {
             <img src = { headshot } id = 'homepageHeadshot' alt = 'Headshot of Alex'></img>
             <h3>I'm passionate about optimizing systems, automated processes, and project-based learning.</h3>
           </HomePanel>
-          <Parallax />
+          <Parallax imagePath = 'maarten-deckers-T5nXYXCf50I-unsplash.jpg'/>
           <HomePanel id = 'resumePanel'>
             <h2>Resume</h2>
             <p>To view my resume, please click the button below.</p>
@@ -37,7 +37,7 @@ function App() {
             <h3>Programming</h3>
             <h3>Mechanical</h3>
           </HomePanel>
-          <Parallax />
+          <Parallax imagePath = 'meritt-thomas-PWA7RiUBBIo-unsplash.jpg'/>
           <HomePanel id = 'contactPanel'>
             <h2>Contact</h2>
             <form>
