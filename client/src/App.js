@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 //Import assets
 import './assets/global.css'
 import headshot from './assets/images/headshot.jpg'
+import resume from './assets/Alexander Arcasoy Resume 2021.pdf'
 
 //Import components
 import Navbar from './components/Navbar'
@@ -27,7 +28,7 @@ function App() {
           <HomePanel id = 'resumePanel'>
             <h2>Resume</h2>
             <p>To view my resume, please click the button below.</p>
-            <StyledButton>View</StyledButton>
+            <StyledButton onClick = {() => window.open(resume, '_blank', 'noopener,noreferrer')}>View</StyledButton>
           </HomePanel>
           <Parallax />
           <HomePanel id = 'portfolioPanel'>
@@ -44,6 +45,7 @@ function App() {
               <input type = 'text' placeholder = 'Email' className = 'textInput' />
               <input type = 'text' placeholder = 'Subject' className = 'textInput' />
               <input type = 'text' placeholder = 'Type your message here...' className = 'textInput' />
+              <input type = 'submit' value = 'Submit' />
             </form>
           </HomePanel>
           <h1 id = 'stay-updated'>Stay Updated</h1>
