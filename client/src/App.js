@@ -13,6 +13,7 @@ import Navbar from './components/Navbar'
 
 function App() {
   return (
+    // TODO: Configure Prettier
     <div className="App">
       <Navbar />
       <BrowserRouter>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { renderMatches } from "react-router-dom";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import styled from 'styled-components';
 
@@ -71,6 +70,8 @@ const StyledNavbar = styled.div`
         }
     }
 `
+
+// TODO: Change styles from React styled-components to React inline CSS referencing variables
 
 const someBooleanSomewhere = false;
 

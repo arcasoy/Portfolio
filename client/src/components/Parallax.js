@@ -25,6 +25,21 @@ export default function Parallax(props) {
             displayImgPath = props.imgPath;
     };
 
+    // TODO: Change logic for refercing images when passed in as prop.
+
+    // idea 1: if / else if / else
+    // if (props.imagepath === 'asdf') displayImagePath = 'asdfasdf';
+    // else if () ...
+    // else
+
+    // idea 2: object reference
+    // const image = ({
+    //     'imageName1.jpg': mit,
+    //     ...
+    // })[props.imagePath] || props.imagePath;
+
+    // and then this would use shorthand in object for layers
+
     return (
         <>
             <ParallaxBanner
