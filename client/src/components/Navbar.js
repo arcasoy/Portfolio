@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { renderMatches } from "react-router-dom";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import styled from 'styled-components';
 
-const logo = require("../assets/images/nav-logo.webp")
+const logo = require("../assets/images/nav-logo.webp");
 
 const StyledNavbar = styled.div`
     z-index: 10;
@@ -71,6 +72,12 @@ const StyledNavbar = styled.div`
     }
 `
 
+const someBooleanSomewhere = false;
+
+const navFlexStyle = {
+    backgroundColor: someBooleanSomewhere ? 'red' : 'blue',
+};
+
 export default function Navbar() {
 
     const [dynamicOffset, setDynamicOffset] = useState(5);
@@ -81,17 +88,18 @@ export default function Navbar() {
         window.addEventListener('resize', () => {
             setWindowWidth(window.innerWidth);
         })
-    })
+    });
 
     const handleOnClick = () => {
         let nav = document.getElementById('main-nav')
         setDynamicOffset(-nav.clientHeight);
         console.log(dynamicOffset)
-    }
+    };
 
     return (
+        // TODO: Replace scrolling Link with window.scrollTo and scroll-behavior: smooth
         <StyledNavbar id = 'main-nav'>
-            <div id = 'nav-flex-elements'>
+            <div id = 'nav-flex-elements' style={navFlexStyle}>
                 <a href = '/' id = "nav-logo-link">
                     <img src = { logo } id = 'nav-logo' alt="Alex's Logo, two sideways A's formatted similar to HTML tags"></img>
                 </a>
@@ -107,4 +115,4 @@ export default function Navbar() {
             <div id = 'nav-yellow-bar'></div>
         </StyledNavbar>
     );
-}
+};

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './assets/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from 'styled-components';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
