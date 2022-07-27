@@ -1,43 +1,47 @@
 @font-face {
-    font-family: "Lulo-Clean";
-    src: local("Lulo-Clean"),
-        url("./fonts/Lulo\ Clean\ W01\ One\ Bold.ttf") format('truetype');
+  font-family: "Lulo-Clean";
+  src: local("Lulo-Clean"),
+    url("./fonts/Lulo\ Clean\ W01\ One\ Bold.ttf") format("truetype");
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lulo-Clean';
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lulo-Clean";
 }
 
 h1 {
-    font-size: 80px;
+  font-size: 80px;
 }
 
 h2 {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 h3 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 h4 {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #ffd801;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffd801;
 }
 
 #homepageHeadshot {
-    width: 100%;
+  width: 100%;
 }

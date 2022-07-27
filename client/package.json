@@ -48,5 +48,8 @@
   "bugs": {
     "url": "https://github.com/arcasoy/Portfolio/issues"
   },
-  "homepage": "https://localhost:3000/"
+  "homepage": "https://localhost:3000/",
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
 }
