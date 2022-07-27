@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <>
       <Parallax
-        imagePath="wenhao-ryan-zGx9P250WaE-unsplash.jpg"
+        imgPath="wenhao-ryan-zGx9P250WaE-unsplash.jpg"
         aspectRatio="3"
       />
       <HomePanel id="aboutPanel">
@@ -25,7 +25,7 @@ export default function HomePage() {
           project-based learning.
         </h3>
       </HomePanel>
-      <Parallax imagePath="maarten-deckers-T5nXYXCf50I-unsplash.jpg" />
+      <Parallax imgPath="maarten-deckers-T5nXYXCf50I-unsplash.jpg" />
       <HomePanel id="resumePanel">
         <h2>Resume</h2>
         <p>To view my resume, please click the button below.</p>
@@ -44,7 +44,7 @@ export default function HomePage() {
         <StyledButton>port page</StyledButton>
         <Link to="/social-tracker">Social Tracker</Link>
       </HomePanel>
-      <Parallax imagePath="meritt-thomas-PWA7RiUBBIo-unsplash.jpg" />
+      <Parallax imgPath="meritt-thomas-PWA7RiUBBIo-unsplash.jpg" />
       <HomePanel id="contactPanel">
         <h2>Contact</h2>
         <form>
