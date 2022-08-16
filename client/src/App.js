@@ -10,6 +10,7 @@ import SocialTrackerPage from "./pages/SocialTrackerPage";
 
 //Import components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/social-tracker" element={<SocialTrackerPage />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

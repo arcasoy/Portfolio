@@ -30,6 +30,7 @@ const StyledNavbar = styled.div`
     min-height: 50px;
     justify-content: center;
     align-items: center;
+    padding: 0.25em;
   }
 
   #nav-balance-logo {
