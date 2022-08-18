@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Toggle from "react-toggle";
 
 //Import assets
 import headshot from "../assets/images/headshot.jpg";
 import resume from "../assets/Alexander Arcasoy Resume 2021.pdf";
+//import "react-toggle/style.css";
 
 //Import components
 import Parallax from "../components/Parallax";
@@ -11,6 +13,12 @@ import HomePanel from "../components/HomePanel";
 import StyledButton from "../components/Button";
 
 export default function HomePage() {
+  const [portPanelToggle, setPortPanelToggle] = useState(false);
+
+  const handleToggle = () => {
+    setPortPanelToggle(!portPanelToggle);
+  };
+
   return (
     <>
       <Parallax
@@ -39,9 +47,18 @@ export default function HomePage() {
       <HomePanel id="portfolioPanel">
         <h2>Portfolio</h2>
         <p>Click the images below to learn about each project.</p>
-        <h3>Programming</h3>
-        <h3>Mechanical</h3>
-        <StyledButton>port page</StyledButton>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "25px",
+            justifyContent: "center",
+          }}
+        >
+          <h3>Software</h3>
+          <Toggle icons={false} onChange={handleToggle} />
+          <h3>Hardware</h3>
+        </div>
         <Link to="/social-tracker">Social Tracker</Link>
       </HomePanel>
       <Parallax imgPath="meritt-thomas-PWA7RiUBBIo-unsplash.jpg" />
