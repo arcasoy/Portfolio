@@ -11,9 +11,10 @@ import resume from "../assets/Alexander Arcasoy Resume 2021.pdf";
 import Parallax from "../components/Parallax";
 import HomePanel from "../components/HomePanel";
 import StyledButton from "../components/Button";
+import PortPanelCardViewer from "../components/PortPanelCardViewer";
 
 export default function HomePage() {
-  const [portPanelToggle, setPortPanelToggle] = useState(false);
+  const [portPanelToggle, setPortPanelToggle] = useState(true);
 
   const handleToggle = () => {
     setPortPanelToggle(!portPanelToggle);
@@ -59,7 +60,8 @@ export default function HomePage() {
           <Toggle icons={false} onChange={handleToggle} />
           <h3>Hardware</h3>
         </div>
-        <Link to="/social-tracker">Social Tracker</Link>
+        <PortPanelCardViewer toggle={portPanelToggle} />
+        {/* <Link to="/social-tracker">Social Tracker</Link> */}
       </HomePanel>
       <Parallax imgPath="meritt-thomas-PWA7RiUBBIo-unsplash.jpg" />
       <HomePanel id="contactPanel">

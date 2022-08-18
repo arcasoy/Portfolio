@@ -1,0 +1,17 @@
+{
+  "socialTracker": {
+    "section": "software",
+    "title": "Social Tracker",
+    "skills": ["GCP", "JavaScript", "SQL"]
+  },
+  "footStretcher": {
+    "section": "hardware",
+    "title": "Foot Stretcher Optimization",
+    "skills": ["SolidWorks", "FEA", "DFMEA"]
+  },
+  "portfolioSite": {
+    "section": "software",
+    "title": "Portfolio Site",
+    "skills": ["AWS", "React"]
+  }
+}

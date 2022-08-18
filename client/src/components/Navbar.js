@@ -98,7 +98,6 @@ export default function Navbar() {
   const handleOnClick = () => {
     let nav = document.getElementById("main-nav");
     setDynamicOffset(-nav.clientHeight);
-    console.log(dynamicOffset);
   };
 
   return (
