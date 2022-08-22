@@ -2,7 +2,8 @@
   "socialTracker": {
     "section": "software",
     "title": "Social Tracker",
-    "skills": ["GCP", "JavaScript", "SQL"]
+    "skills": ["GCP", "JavaScript", "SQL"],
+    "image": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png"
   },
   "footStretcher": {
     "section": "hardware",
@@ -13,5 +14,11 @@
     "section": "software",
     "title": "Portfolio Site",
     "skills": ["AWS", "React"]
+  },
+  "test1": {
+    "section": "software"
+  },
+  "test2": {
+    "section": "software"
   }
 }
