@@ -9,9 +9,12 @@ import PortProjects from "../data/PortProjects.json";
 import PortPanelCard from "./PortPanelCard";
 
 const StyledDiv = styled.div`
+  max-width: 750px;
+  margin: auto;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
   justify-content: center;
   margin-bottom: 2rem;
