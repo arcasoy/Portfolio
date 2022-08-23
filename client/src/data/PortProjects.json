@@ -6,7 +6,8 @@
     "image": {
       "src": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png",
       "alt": "SocialTracker Logo"
-    }
+    },
+    "path": "/social-tracker"
   },
   "footStretcher": {
     "category": "hardware",

@@ -1,6 +1,7 @@
 // Import packages
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Import assets
 import defaultImage from "../assets/images/portfolioItems/marvin-meyer-SYTO3xs06fU-unsplash.jpg";
@@ -48,22 +49,27 @@ export default function PortPanelCard(props) {
   }
 
   return (
-    <StyledDiv className="port-panel-card">
-      <img
-        src={imageData.src}
-        alt={imageData.alt}
-        style={{
-          objectFit: "cover",
-          width: "100%",
-          height: "100%",
-          display: "block",
-          zIndex: "0",
-        }}
-      ></img>
-      <HoverTextStyledDiv>
-        <h5>{props.content.title}</h5>
-        <p>{skillsContent}</p>
-      </HoverTextStyledDiv>
-    </StyledDiv>
+    <Link
+      to={props.content.path ? props.content.path : "/"}
+      style={{ color: "white" }}
+    >
+      <StyledDiv className="port-panel-card">
+        <img
+          src={imageData.src}
+          alt={imageData.alt}
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+            display: "block",
+            zIndex: "0",
+          }}
+        ></img>
+        <HoverTextStyledDiv>
+          <h5>{props.content.title}</h5>
+          <p>{skillsContent}</p>
+        </HoverTextStyledDiv>
+      </StyledDiv>
+    </Link>
   );
 }
