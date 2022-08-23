@@ -1,24 +1,27 @@
 {
   "socialTracker": {
-    "section": "software",
+    "category": "software",
     "title": "Social Tracker",
     "skills": ["GCP", "JavaScript", "SQL"],
-    "image": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png"
+    "image": {
+      "src": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png",
+      "alt": "SocialTracker Logo"
+    }
   },
   "footStretcher": {
-    "section": "hardware",
+    "category": "hardware",
     "title": "Foot Stretcher Optimization",
     "skills": ["SolidWorks", "FEA", "DFMEA"]
   },
   "portfolioSite": {
-    "section": "software",
+    "category": "software",
     "title": "Portfolio Site",
     "skills": ["AWS", "React"]
   },
   "test1": {
-    "section": "software"
+    "category": "software"
   },
   "test2": {
-    "section": "software"
+    "category": "software"
   }
 }

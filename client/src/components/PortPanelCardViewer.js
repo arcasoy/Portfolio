@@ -25,9 +25,9 @@ export default function PortPanelCardViewer(props) {
   const hardwareCards = [];
 
   Object.keys(PortProjects).forEach(function (key, index) {
-    if (PortProjects[key].section === "software") {
+    if (PortProjects[key].category === "software") {
       softwareCards.push(PortProjects[key]);
-    } else if (PortProjects[key].section === "hardware") {
+    } else if (PortProjects[key].category === "hardware") {
       hardwareCards.push(PortProjects[key]);
     }
   });
