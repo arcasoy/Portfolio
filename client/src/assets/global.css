@@ -20,6 +20,7 @@ h4,
 h5,
 h6 {
   font-family: "Lulo-Clean";
+  margin: 0;
 }
 
 h1 {
@@ -33,14 +34,18 @@ h2 {
 
 h3 {
   font-size: 25px;
+  margin: 1rem;
 }
 
 h4 {
   font-size: 15px;
 }
 
-p {
+p,
+figcaption {
   font-family: "Futura";
+  font-size: 18px;
+  margin: 0.5rem;
 }
 
 .App {
