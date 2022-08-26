@@ -156,7 +156,7 @@ export default function HomePage() {
             placeholder="Type your message here..."
             className="textInput"
           />
-          <input type="submit" value="Submit" />
+          <StyledButton type="submit">Submit</StyledButton>
         </form>
       </HomePanel>
       <h1 id="stay-updated">Stay Updated</h1>

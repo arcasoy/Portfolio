@@ -48,6 +48,11 @@ figcaption {
   margin: 0.5rem;
 }
 
+button {
+  font-family: "Futura";
+  font-size: 20px;
+}
+
 .App {
   display: flex;
   flex-direction: column;
