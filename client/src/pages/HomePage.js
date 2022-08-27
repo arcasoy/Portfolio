@@ -24,6 +24,13 @@ const StyledHeadshot = styled.img`
   max-width: 400px;
 `;
 
+const StyledContactInput = styled.input`
+  border: solid;
+  border-width: 3px;
+  max-width: 400px;
+  margin: auto;
+`;
+
 const StyledPanelP = styled.p`
   font-size: 25px;
 `;
@@ -142,21 +149,42 @@ export default function HomePage() {
           <h3>Hardware</h3>
         </div>
         <PortPanelCardViewer toggle={portPanelToggle} />
-        {/* <Link to="/social-tracker">Social Tracker</Link> */}
       </HomePanel>
       <Parallax imgPath="meritt-thomas-PWA7RiUBBIo-unsplash.jpg" />
       <HomePanel id="contactPanel">
         <h2>Contact</h2>
-        <form>
-          <input type="text" placeholder="Name" className="textInput" />
-          <input type="text" placeholder="Email" className="textInput" />
-          <input type="text" placeholder="Subject" className="textInput" />
-          <input
+        <form
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <StyledContactInput
+            type="text"
+            placeholder="Name"
+            className="contact-input"
+          />
+          <StyledContactInput
+            type="text"
+            placeholder="Email"
+            className="contact-input"
+          />
+          <StyledContactInput
+            type="text"
+            placeholder="Subject"
+            className="contact-input"
+          />
+          <StyledContactInput
             type="text"
             placeholder="Type your message here..."
-            className="textInput"
+            className="contact-input"
           />
-          <StyledButton type="submit">Submit</StyledButton>
+          <StyledButton
+            type="submit"
+            style={{ maxWidth: "200px", alignSelf: "center" }}
+          >
+            Submit
+          </StyledButton>
         </form>
       </HomePanel>
       <h1 id="stay-updated">Stay Updated</h1>
