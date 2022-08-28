@@ -9,12 +9,13 @@ import {
   scroller,
 } from "react-scroll";
 import styled from "styled-components";
+import ReactModal from "react-modal";
 
 const logo = require("../assets/images/nav-logo.webp");
 
 const StyledNavbar = styled.div`
   z-index: 10;
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: ${(props) => props.theme.colors.pureWhite};
   width: 100%;
@@ -41,19 +42,22 @@ const StyledNavbar = styled.div`
     display: flex;
   }
 
-  #nav-links > a {
+  .nav-item {
     font-family: "Lulo-Clean";
     white-space: nowrap;
     width: 180px;
     text-align: center;
+    border: none;
+    background: transparent;
+    font-size: 16px;
   }
 
-  #nav-links a:hover {
+  .nav-item:hover {
     color: #ffd801;
     transition: color 500ms;
   }
 
-  #nav-links a:not(:hover) {
+  .nav-item:not(:hover) {
     color: #000;
     transition: color 500ms;
   }
@@ -82,11 +86,17 @@ const StyledNavbar = styled.div`
   }
 `;
 
+const ReactModalStyles = {
+  overlay: { zIndex: 20, backgroundColor: "rgba(0, 0, 0, 0.5)" },
+  content: {},
+};
+
 export default function Navbar() {
   const scrollDuration = 2;
 
   const [dynamicOffset, setDynamicOffset] = useState(5);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     handleOnClick();
@@ -98,6 +108,14 @@ export default function Navbar() {
   const handleOnClick = () => {
     let nav = document.getElementById("main-nav");
     setDynamicOffset(-nav.clientHeight);
+  };
+
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -114,6 +132,7 @@ export default function Navbar() {
         <div id="nav-links">
           <Link
             activeClass="active"
+            className="nav-item"
             to="App"
             //onClick={handleOnClick}
             offset={dynamicOffset}
@@ -124,6 +143,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
+            className="nav-item"
             to="resumePanel"
             //={handleOnClick}
             offset={dynamicOffset}
@@ -134,6 +154,7 @@ export default function Navbar() {
             Resume
           </Link>
           <Link
+            className="nav-item"
             to="portfolioPanel"
             onClick={handleOnClick}
             offset={dynamicOffset}
@@ -144,6 +165,7 @@ export default function Navbar() {
             Portfolio
           </Link>
           <Link
+            className="nav-item"
             to="contactPanel"
             //onClick={handleOnClick}
             offset={dynamicOffset}
@@ -153,16 +175,9 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <Link
-            to="stay-updated"
-            onClick={handleOnClick}
-            offset={dynamicOffset}
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-          >
+          <button onClick={handleModalOpen} className="nav-item">
             Stay Updated
-          </Link>
+          </button>
         </div>
         <img
           src={logo}
@@ -171,6 +186,14 @@ export default function Navbar() {
         ></img>
       </div>
       <div id="nav-yellow-bar"></div>
+      <ReactModal
+        isOpen={modalOpen}
+        onRequestClose={handleModalClose}
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        closeTimeoutMS={1000}
+        style={ReactModalStyles}
+      ></ReactModal>
     </StyledNavbar>
   );
 }

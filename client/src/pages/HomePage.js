@@ -170,7 +170,6 @@ export default function HomePage() {
           </StyledButton>
         </form>
       </HomePanel>
-      <h1 id="stay-updated">Stay Updated</h1>
     </>
   );
 }
