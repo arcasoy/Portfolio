@@ -24,13 +24,6 @@ const StyledHeadshot = styled.img`
   max-width: 400px;
 `;
 
-const StyledContactInput = styled.input`
-  border: solid;
-  border-width: 3px;
-  max-width: 400px;
-  margin: auto;
-`;
-
 const StyledPanelP = styled.p`
   font-size: 25px;
 `;
@@ -157,28 +150,18 @@ export default function HomePage() {
           style={{
             display: "flex",
             flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <StyledContactInput
-            type="text"
-            placeholder="Name"
-            className="contact-input"
-          />
-          <StyledContactInput
-            type="text"
-            placeholder="Email"
-            className="contact-input"
-          />
-          <StyledContactInput
-            type="text"
-            placeholder="Subject"
-            className="contact-input"
-          />
-          <StyledContactInput
+          <input type="text" placeholder="Name" className="contact-input" />
+          <input type="text" placeholder="Email" className="contact-input" />
+          <input type="text" placeholder="Subject" className="contact-input" />
+          <textarea
             type="text"
             placeholder="Type your message here..."
+            rows="5"
             className="contact-input"
-          />
+          ></textarea>
           <StyledButton
             type="submit"
             style={{ maxWidth: "200px", alignSelf: "center" }}

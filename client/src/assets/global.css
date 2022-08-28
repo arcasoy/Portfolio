@@ -195,6 +195,24 @@ button {
   border-color: #ffd801;
 }
 
+.contact-input {
+  background: transparent;
+  color: #ffffff;
+  border: solid;
+  border-color: white;
+  padding: 0.5rem;
+  margin: 5px 0px;
+  border-width: 3px;
+  width: 80%;
+  max-width: 750px;
+  font-family: "Futura";
+  font-size: 18px;
+}
+
+.contact-input::placeholder {
+  color: #ffffff;
+}
+
 /* .react-toggle--focus .react-toggle-thumb {
   -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
   -moz-box-shadow: 0px 0px 3px 2px #0099E0;
