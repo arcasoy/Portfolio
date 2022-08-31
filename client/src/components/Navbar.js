@@ -1,3 +1,4 @@
+// Import packages
 import React, { useEffect, useState } from "react";
 import {
   Link,
@@ -11,8 +12,14 @@ import {
 import styled from "styled-components";
 import ReactModal from "react-modal";
 
-const logo = require("../assets/images/nav-logo.webp");
+//Import Components
+import StyledButton from "../components/Button";
 
+// Import assets
+const logo = require("../assets/images/nav-logo.webp");
+const StayUpdatedLogo = require("../assets/images/AA.png");
+
+// Styled Components
 const StyledNavbar = styled.div`
   z-index: 10;
   position: sticky;
@@ -86,9 +93,45 @@ const StyledNavbar = styled.div`
   }
 `;
 
+// React Modal
 const ReactModalStyles = {
-  overlay: { zIndex: 20, backgroundColor: "rgba(0, 0, 0, 0.5)" },
-  content: {},
+  overlay: {
+    zIndex: 20,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
+  content: {
+    top: "0",
+    bottom: "0",
+    left: "0",
+    right: "0",
+    width: "90%",
+    maxWidth: "500px",
+    aspectRatio: "16/9",
+    borderWidth: "10px",
+    borderColor: "#ffd801",
+    margin: "auto",
+    padding: "0px",
+    backgroundColor: "#161616",
+
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 25,
+  },
+};
+
+const StayUpdatedEmailStyle = {
+  background: "transparent",
+  color: "#ffffff",
+  border: "solid",
+  borderColor: "white",
+  padding: "0.5rem",
+  margin: "5px 0px",
+  borderWidth: "3px",
+  maxWidth: "50%",
+  fontFamily: "Futura",
+  fontSize: "18px",
 };
 
 export default function Navbar() {
@@ -188,12 +231,38 @@ export default function Navbar() {
       <div id="nav-yellow-bar"></div>
       <ReactModal
         isOpen={modalOpen}
+        appElement={document.getElementsByClassName("App")}
         onRequestClose={handleModalClose}
         shouldCloseOnOverlayClick={true}
         shouldCloseOnEsc={true}
         closeTimeoutMS={1000}
         style={ReactModalStyles}
-      ></ReactModal>
+      >
+        <img
+          src={StayUpdatedLogo}
+          alt="Alex's logo"
+          style={{
+            position: "absolute",
+            margin: "auto",
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            opacity: "0.5",
+          }}
+        ></img>
+        <h3 style={{ color: "white", zIndex: 10 }}>Stay Updated</h3>
+        <p style={{ color: "white", textAlign: "center", zIndex: 10 }}>
+          Add your email to hear about Alex's project and website updates!
+        </p>
+        <form style={{ display: "block", zIndex: 10 }}>
+          <input
+            type="text"
+            placeholder="Email"
+            style={StayUpdatedEmailStyle}
+          ></input>
+          <StyledButton type="submit">Submit</StyledButton>
+        </form>
+      </ReactModal>
     </StyledNavbar>
   );
 }
