@@ -7,7 +7,7 @@ const StyledButton = styled.button`
   transition: background-color 0.5s, color 0.5s ease;
   padding: 5px 50px;
   ${(props) => {
-    switch (props.$mode) {
+    switch (props.mode) {
       case "dark":
         return `
             background-color: ${props.theme.colors.pureBlack};

@@ -51,16 +51,16 @@ export default function HomePage() {
           id="about-panel-wrapper"
           style={{ maxWidth: "1000px", margin: "auto" }}
         >
-          <h3>Nice to meet you. I'm a Mechanical Engineer based in Boston.</h3>
+          <h4>Nice to meet you. I'm a Mechanical Engineer based in Boston.</h4>
           <StyledHeadshot
             src={headshot}
             id="homepageHeadshot"
             alt="Headshot of Alex"
           ></StyledHeadshot>
-          <h3>
+          <h4>
             I'm passionate about optimizing systems, automated processes, and
             project-based learning.
-          </h3>
+          </h4>
           <div
             id="learn-more-content"
             style={{
@@ -137,9 +137,9 @@ export default function HomePage() {
             justifyContent: "center",
           }}
         >
-          <h3>Software</h3>
+          <h4>Software</h4>
           <Toggle icons={false} onChange={handlePortPanelToggle} />
-          <h3>Hardware</h3>
+          <h4>Hardware</h4>
         </div>
         <PortPanelCardViewer toggle={portPanelToggle} />
       </HomePanel>

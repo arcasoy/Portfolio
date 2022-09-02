@@ -250,7 +250,7 @@ export default function Navbar() {
             opacity: "0.5",
           }}
         ></img>
-        <h3 style={{ color: "white", zIndex: 10 }}>Stay Updated</h3>
+        <h4 style={{ color: "white", zIndex: 10 }}>Stay Updated</h4>
         <p style={{ color: "white", textAlign: "center", zIndex: 10 }}>
           Add your email to hear about Alex's project and website updates!
         </p>
