@@ -258,10 +258,26 @@ button {
   min-width: 350px;
 }
 
-.port-page-section-content {
+.port-page-section-content-offset {
   max-width: 750px;
+  margin-left: auto;
+  width: 60%;
 }
 
-.port-page-section-content ul {
+.port-page-section-content-offset ul {
   padding-left: 1rem;
+}
+
+.port-page-section-content-center {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.port-page-section-content-center img {
+  width: 85%;
+  object-fit: contain;
+  border: 5px solid #ffd801;
 }

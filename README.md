@@ -4,7 +4,7 @@ Portfolio site build to replace [Wix portfolio](https://arcasoy1.wixsite.com/por
 
 ## Frontend
 
-Frontend was build in React
+Frontend was built with React
 
 ## Backend
 
