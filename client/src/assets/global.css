@@ -6,7 +6,8 @@
 
 @font-face {
   font-family: "Futura";
-  src: local("Futura"), url("./fonts/futura\ light\ bt.ttf") format("truetype");
+  src: local("Futura"),
+    url("./fonts/Futura\ LT\ W01\ Book.ttf") format("truetype");
 }
 
 html {
