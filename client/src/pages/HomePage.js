@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
 import Toggle from "react-toggle";
 import styled from "styled-components";
 
@@ -14,6 +13,14 @@ import Parallax from "../components/Parallax";
 import HomePanel from "../components/HomePanel";
 import StyledButton from "../components/Button";
 import PortPanelCardViewer from "../components/PortPanelCardViewer";
+import {
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 // Styled Components
 const StyledHeadshot = styled.img`
@@ -28,9 +35,13 @@ const StyledPanelP = styled.p`
   font-size: 25px;
 `;
 
-export default function HomePage() {
+export default function HomePage(props) {
   const [portPanelToggle, setPortPanelToggle] = useState(true);
   const [learnMoreToggle, setLearnMoreToggle] = useState(false);
+
+  useEffect(() => {
+    console.log(JSON.stringify(props));
+  });
 
   const handlePortPanelToggle = () => {
     setPortPanelToggle(!portPanelToggle);

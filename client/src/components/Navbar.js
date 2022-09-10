@@ -1,5 +1,6 @@
 // Import packages
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { Link as DomLink } from "react-router-dom";
 import {
   Link,
   Button,
@@ -134,7 +135,7 @@ const StayUpdatedEmailStyle = {
   fontSize: "18px",
 };
 
-export default function Navbar() {
+export default function Navbar(props) {
   const scrollDuration = 2;
 
   const [dynamicOffset, setDynamicOffset] = useState(5);
@@ -147,6 +148,22 @@ export default function Navbar() {
       setWindowWidth(window.innerWidth);
     });
   });
+
+  // Scroll to specific sub element
+  useEffect(() => {
+    console.log("rerendered");
+  });
+
+  //use effect here?
+  const elementRendered = () => {
+    if (typeof props.greenRef.current != "undefined") return true;
+    else console.log("not rendered");
+  };
+
+  const goToGreen = async () => {
+    await elementRendered();
+    props.greenRef.current.scrollIntoView();
+  };
 
   const handleOnClick = () => {
     let nav = document.getElementById("main-nav");
@@ -173,6 +190,14 @@ export default function Navbar() {
           ></img>
         </a>
         <div id="nav-links">
+          <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
+            testpage
+          </DomLink>
+          <div onClick={() => goToGreen()}>
+            <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
+              testpage Green
+            </DomLink>
+          </div>
           <Link
             activeClass="active"
             className="nav-item"
