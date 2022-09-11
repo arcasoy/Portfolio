@@ -142,7 +142,6 @@ export default function Navbar(props) {
   const scrollDuration = 2;
 
   const [dynamicOffset, setDynamicOffset] = useState(5);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [modalOpen, setModalOpen] = useState(false);
 
   // Global State Context
@@ -150,34 +149,30 @@ export default function Navbar(props) {
     useContext(GlobalStateContext);
 
   // Scroll states
-  const [scrollToGreen, setScrollToGreen] = useState(false);
+  const [scrollToResume, setScrollToResume] = useState(false);
+  const [scrollToPortfolio, setScrollToPortfolio] = useState(false);
 
   useEffect(() => {
-    handleOnClick();
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
-  });
+    //setDynamicOffset in global state context
+    let nav = document.getElementById("main-nav");
+    setScrollDynamicOffset(-nav.clientHeight);
+
+    //deprecating dynamicOffset & setDynamicOffset
+    // remove the below once react-scroll Link elements are replaced with
+    // react-router Link elements
+    setDynamicOffset(-nav.clientHeight);
+
+    console.log("dynamicOffset: ", dynamicOffset);
+    console.log("scrollDynamicOffset: ", scrollDynamicOffset);
+  }, [scrollDynamicOffset, setScrollDynamicOffset, dynamicOffset]);
 
   // Scroll to specific sub element
   useEffect(() => {
-    if (scrollToGreen) {
-      //props.greenRef.current.scrollIntoView();
-      props.greenRef.current.dynamicScroll();
-      console.log(props.greenRef.current);
-      setScrollToGreen(false);
+    if (scrollToResume) {
+      props.homePagePanelRefs.current.dynamicScrollToResume();
+      setScrollToResume(false);
     }
-  }, [scrollToGreen, props.greenRef, dynamicOffset]);
-
-  const handleOnClick = () => {
-    let nav = document.getElementById("main-nav");
-    setDynamicOffset(-nav.clientHeight);
-
-    //Setting the nav height globally
-    console.log("-nav.clientHeight: ", -nav.clientHeight);
-    setScrollDynamicOffset(-nav.clientHeight);
-    console.log("scrollDynamicOffset: ", scrollDynamicOffset);
-  };
+  }, [scrollToResume, dynamicOffset, props.homePagePanelRefs]);
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -199,19 +194,10 @@ export default function Navbar(props) {
           ></img>
         </a>
         <div id="nav-links">
-          <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
-            testpage
-          </DomLink>
-          <div onClick={() => setScrollToGreen(true)}>
-            <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
-              testpage Green
-            </DomLink>
-          </div>
           <Link
             activeClass="active"
             className="nav-item"
             to="App"
-            //onClick={handleOnClick}
             offset={dynamicOffset}
             spy={true}
             smooth={true}
@@ -222,7 +208,6 @@ export default function Navbar(props) {
           <Link
             className="nav-item"
             to="resumePanel"
-            //={handleOnClick}
             offset={dynamicOffset}
             spy={true}
             smooth={true}
@@ -230,10 +215,12 @@ export default function Navbar(props) {
           >
             Resume
           </Link>
+          <div onClick={() => setScrollToResume(true)}>
+            <DomLink to="/">Resume</DomLink>
+          </div>
           <Link
             className="nav-item"
             to="portfolioPanel"
-            onClick={handleOnClick}
             offset={dynamicOffset}
             spy={true}
             smooth={true}
@@ -241,10 +228,12 @@ export default function Navbar(props) {
           >
             Portfolio
           </Link>
+          <div onClick={() => setScrollToPortfolio(true)}>
+            <DomLink to="/">Portfolio</DomLink>
+          </div>
           <Link
             className="nav-item"
             to="contactPanel"
-            //onClick={handleOnClick}
             offset={dynamicOffset}
             spy={true}
             smooth={true}

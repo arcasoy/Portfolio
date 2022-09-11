@@ -1,4 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useImperativeHandle,
+  forwardRef,
+  useContext,
+} from "react";
 import Toggle from "react-toggle";
 import styled from "styled-components";
 
@@ -22,6 +29,9 @@ import {
   scroller,
 } from "react-scroll";
 
+//Import Context
+import { GlobalStateContext } from "../context/globalState";
+
 // Styled Components
 const StyledHeadshot = styled.img`
   border-radius: 100%;
@@ -35,13 +45,14 @@ const StyledPanelP = styled.p`
   font-size: 25px;
 `;
 
-export default function HomePage(props) {
+const HomePage = forwardRef((props, ref) => {
+  // get Global State Context
+  const { scrollDynamicOffset, setScrollDynamicOffset } =
+    useContext(GlobalStateContext);
+
+  // component level State declaration
   const [portPanelToggle, setPortPanelToggle] = useState(true);
   const [learnMoreToggle, setLearnMoreToggle] = useState(false);
-
-  useEffect(() => {
-    console.log(JSON.stringify(props));
-  });
 
   const handlePortPanelToggle = () => {
     setPortPanelToggle(!portPanelToggle);
@@ -50,6 +61,26 @@ export default function HomePage(props) {
   const handleLearnMoreClick = () => {
     setLearnMoreToggle(!learnMoreToggle);
   };
+
+  // initialize panel refs
+  const resumePanelRef = useRef(null);
+  const portfolioPanelRef = useRef(null);
+
+  //set methods for panel refs
+  useImperativeHandle(ref, () => ({
+    dynamicScrollToResume: () => {
+      window.scrollTo(
+        0,
+        resumePanelRef.current.offsetTop + scrollDynamicOffset
+      );
+    },
+    dynamicScrollToPortfolio: () => {
+      window.scrollTo(
+        0,
+        portfolioPanelRef.current.offsetTop + scrollDynamicOffset
+      );
+    },
+  }));
 
   return (
     <>
@@ -123,7 +154,7 @@ export default function HomePage(props) {
         </div>
       </HomePanel>
       <Parallax imgPath="maarten-deckers-T5nXYXCf50I-unsplash.jpg" />
-      <HomePanel id="resumePanel">
+      <HomePanel id="resumePanel" ref={resumePanelRef}>
         <h2>Resume</h2>
         <StyledPanelP>
           To view my resume, please click the button below.
@@ -135,7 +166,7 @@ export default function HomePage(props) {
         </StyledButton>
       </HomePanel>
       <Parallax />
-      <HomePanel id="portfolioPanel">
+      <HomePanel id="portfolioPanel" ref={portfolioPanelRef}>
         <h2>Portfolio</h2>
         <StyledPanelP>
           Click the images below to learn about each project.
@@ -183,4 +214,6 @@ export default function HomePage(props) {
       </HomePanel>
     </>
   );
-}
+});
+
+export default HomePage;
