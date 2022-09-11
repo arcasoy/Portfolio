@@ -1,5 +1,5 @@
 // Import packages
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { Link as DomLink } from "react-router-dom";
 import {
   Link,
@@ -15,6 +15,9 @@ import ReactModal from "react-modal";
 
 //Import Components
 import StyledButton from "../components/Button";
+
+//Import Context
+import { globalState, GlobalStateContext } from "../context/globalState";
 
 // Import assets
 const logo = require("../assets/images/nav-logo.webp");
@@ -142,6 +145,13 @@ export default function Navbar(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [modalOpen, setModalOpen] = useState(false);
 
+  // Global State Context
+  const { scrollDynamicOffset, setScrollDynamicOffset } =
+    useContext(GlobalStateContext);
+
+  // Scroll states
+  const [scrollToGreen, setScrollToGreen] = useState(false);
+
   useEffect(() => {
     handleOnClick();
     window.addEventListener("resize", () => {
@@ -151,23 +161,22 @@ export default function Navbar(props) {
 
   // Scroll to specific sub element
   useEffect(() => {
-    console.log("rerendered");
-  });
-
-  //use effect here?
-  const elementRendered = () => {
-    if (typeof props.greenRef.current != "undefined") return true;
-    else console.log("not rendered");
-  };
-
-  const goToGreen = async () => {
-    await elementRendered();
-    props.greenRef.current.scrollIntoView();
-  };
+    if (scrollToGreen) {
+      //props.greenRef.current.scrollIntoView();
+      props.greenRef.current.dynamicScroll();
+      console.log(props.greenRef.current);
+      setScrollToGreen(false);
+    }
+  }, [scrollToGreen, props.greenRef, dynamicOffset]);
 
   const handleOnClick = () => {
     let nav = document.getElementById("main-nav");
     setDynamicOffset(-nav.clientHeight);
+
+    //Setting the nav height globally
+    console.log("-nav.clientHeight: ", -nav.clientHeight);
+    setScrollDynamicOffset(-nav.clientHeight);
+    console.log("scrollDynamicOffset: ", scrollDynamicOffset);
   };
 
   const handleModalOpen = () => {
@@ -193,7 +202,7 @@ export default function Navbar(props) {
           <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
             testpage
           </DomLink>
-          <div onClick={() => goToGreen()}>
+          <div onClick={() => setScrollToGreen(true)}>
             <DomLink to={{ pathname: "/test", state: { fromNavBar: true } }}>
               testpage Green
             </DomLink>
