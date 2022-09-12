@@ -8,7 +8,6 @@ import "./assets/global.css";
 //Import pages
 import HomePage from "./pages/HomePage";
 import SocialTrackerPage from "./pages/SocialTrackerPage";
-import TestPage from "./pages/TestPage.js";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -18,8 +17,6 @@ import Footer from "./components/Footer";
 import { GlobalStateContext } from "./context/globalState";
 
 function App() {
-  const homePagePanelRefs = useRef(null);
-
   const [scrollDynamicOffset, setScrollDynamicOffset] = useState(0);
 
   return (
@@ -28,9 +25,9 @@ function App() {
         value={{ scrollDynamicOffset, setScrollDynamicOffset }}
       >
         <BrowserRouter>
-          <Navbar homePagePanelRefs={homePagePanelRefs} />
+          <Navbar />
           <Routes>
-            <Route path="/" element={<HomePage ref={homePagePanelRefs} />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/social-tracker" element={<SocialTrackerPage />} />
           </Routes>
         </BrowserRouter>

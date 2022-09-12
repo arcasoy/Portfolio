@@ -62,26 +62,6 @@ const HomePage = forwardRef((props, ref) => {
     setLearnMoreToggle(!learnMoreToggle);
   };
 
-  // initialize panel refs
-  const resumePanelRef = useRef(null);
-  const portfolioPanelRef = useRef(null);
-
-  //set methods for panel refs
-  useImperativeHandle(ref, () => ({
-    dynamicScrollToResume: () => {
-      window.scrollTo(
-        0,
-        resumePanelRef.current.offsetTop + scrollDynamicOffset
-      );
-    },
-    dynamicScrollToPortfolio: () => {
-      window.scrollTo(
-        0,
-        portfolioPanelRef.current.offsetTop + scrollDynamicOffset
-      );
-    },
-  }));
-
   return (
     <>
       <Parallax
@@ -154,7 +134,7 @@ const HomePage = forwardRef((props, ref) => {
         </div>
       </HomePanel>
       <Parallax imgPath="maarten-deckers-T5nXYXCf50I-unsplash.jpg" />
-      <HomePanel id="resumePanel" ref={resumePanelRef}>
+      <HomePanel id="resumePanel">
         <h2>Resume</h2>
         <StyledPanelP>
           To view my resume, please click the button below.
@@ -166,7 +146,7 @@ const HomePage = forwardRef((props, ref) => {
         </StyledButton>
       </HomePanel>
       <Parallax />
-      <HomePanel id="portfolioPanel" ref={portfolioPanelRef}>
+      <HomePanel id="portfolioPanel">
         <h2>Portfolio</h2>
         <StyledPanelP>
           Click the images below to learn about each project.
