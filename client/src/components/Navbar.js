@@ -145,13 +145,21 @@ export default function Navbar(props) {
   const [scrollToPortfolio, setScrollToPortfolio] = useState(false);
   const [scrollToContact, setScrollToContact] = useState(false);
 
-  // Get windows width
+  // Get navbar height
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    //function for running state setting
+    const getNavbarHeight = () => {
       let nav = document.getElementById("main-nav");
-
       //setDynamicOffset in global state context
       setScrollDynamicOffset(-nav.clientHeight);
+    };
+    // run on window resize
+    window.addEventListener("resize", () => {
+      getNavbarHeight();
+    });
+    // run on window load
+    window.addEventListener("load", () => {
+      getNavbarHeight();
     });
   }, [scrollDynamicOffset, setScrollDynamicOffset]);
 
