@@ -1,15 +1,6 @@
 // Import packages
 import React, { useEffect, useState, useRef, useContext } from "react";
-import { Link as DomLink } from "react-router-dom";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactModal from "react-modal";
 
@@ -216,32 +207,32 @@ export default function Navbar(props) {
           ></img>
         </a>
         <div id="nav-links">
-          <DomLink to="/" className={"nav-item"}>
+          <Link to="/" className={"nav-item"}>
             <p className={"nav-item"} onClick={() => setScrollToHome(true)}>
               Home
             </p>
-          </DomLink>
+          </Link>
 
-          <DomLink to="/" className={"nav-item"}>
+          <Link to="/" className={"nav-item"}>
             <p className={"nav-item"} onClick={() => setScrollToResume(true)}>
               Resume
             </p>
-          </DomLink>
+          </Link>
 
-          <DomLink to="/" className={"nav-item"}>
+          <Link to="/" className={"nav-item"}>
             <p
               className={"nav-item"}
               onClick={() => setScrollToPortfolio(true)}
             >
               Portfolio
             </p>
-          </DomLink>
+          </Link>
 
-          <DomLink to="/" className={"nav-item"}>
+          <Link to="/" className={"nav-item"}>
             <p className={"nav-item"} onClick={() => setScrollToContact(true)}>
               Contact
             </p>
-          </DomLink>
+          </Link>
           <button onClick={handleModalOpen} className="nav-item">
             Stay Updated
           </button>
