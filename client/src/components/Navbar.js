@@ -1,19 +1,14 @@
 // Import packages
-import React, { useEffect, useState } from "react";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import React, { useEffect, useState, useRef, useContext } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactModal from "react-modal";
 
 //Import Components
 import StyledButton from "../components/Button";
+
+//Import Context
+import { globalState, GlobalStateContext } from "../context/globalState";
 
 // Import assets
 const logo = require("../assets/images/nav-logo.webp");
@@ -53,10 +48,13 @@ const StyledNavbar = styled.div`
     font-family: "Lulo-Clean";
     white-space: nowrap;
     width: 180px;
+    height: 100%;
     text-align: center;
     border: none;
     background: transparent;
     font-size: 16px;
+    text-decoration: none;
+    margin: auto;
   }
 
   .nav-item:hover {
@@ -134,24 +132,61 @@ const StayUpdatedEmailStyle = {
   fontSize: "18px",
 };
 
-export default function Navbar() {
-  const scrollDuration = 2;
-
-  const [dynamicOffset, setDynamicOffset] = useState(5);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+export default function Navbar(props) {
   const [modalOpen, setModalOpen] = useState(false);
 
-  useEffect(() => {
-    handleOnClick();
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
-  });
+  // Global State Context
+  const { scrollDynamicOffset, setScrollDynamicOffset } =
+    useContext(GlobalStateContext);
 
-  const handleOnClick = () => {
-    let nav = document.getElementById("main-nav");
-    setDynamicOffset(-nav.clientHeight);
-  };
+  // Scroll states
+  const [scrollToHome, setScrollToHome] = useState(false);
+  const [scrollToResume, setScrollToResume] = useState(false);
+  const [scrollToPortfolio, setScrollToPortfolio] = useState(false);
+  const [scrollToContact, setScrollToContact] = useState(false);
+
+  // Get windows width
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      let nav = document.getElementById("main-nav");
+
+      //setDynamicOffset in global state context
+      setScrollDynamicOffset(-nav.clientHeight);
+    });
+  }, [scrollDynamicOffset, setScrollDynamicOffset]);
+
+  // Scroll to specific sub element
+  useEffect(() => {
+    //handle Scrolling
+    const handleScroll = (ele) => {
+      let scrollDest =
+        ele.getBoundingClientRect().top + window.scrollY + scrollDynamicOffset;
+      window.scrollTo(0, scrollDest);
+    };
+
+    // Timeout 100ms to ensure screen paints
+    setTimeout(() => {
+      if (scrollToHome) {
+        handleScroll(document.getElementsByClassName("App")[0]);
+        setScrollToHome(false);
+      } else if (scrollToResume) {
+        handleScroll(document.getElementById("resumePanel"));
+        setScrollToResume(false);
+      } else if (scrollToPortfolio) {
+        handleScroll(document.getElementById("portfolioPanel"));
+        setScrollToPortfolio(false);
+      } else if (scrollToContact) {
+        handleScroll(document.getElementById("contactPanel"));
+        setScrollToContact(false);
+      }
+    }, 100);
+  }, [
+    scrollToHome,
+    scrollToResume,
+    scrollToPortfolio,
+    scrollToContact,
+    scrollDynamicOffset,
+  ]);
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -162,7 +197,6 @@ export default function Navbar() {
   };
 
   return (
-    // TODO: Replace scrolling Link with window.scrollTo and scroll-behavior: smooth
     <StyledNavbar id="main-nav">
       <div id="nav-flex-elements">
         <a href="/" id="nav-logo-link">
@@ -173,50 +207,31 @@ export default function Navbar() {
           ></img>
         </a>
         <div id="nav-links">
-          <Link
-            activeClass="active"
-            className="nav-item"
-            to="App"
-            //onClick={handleOnClick}
-            offset={dynamicOffset}
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-          >
-            Home
+          <Link to="/" className={"nav-item"}>
+            <p className={"nav-item"} onClick={() => setScrollToHome(true)}>
+              Home
+            </p>
           </Link>
-          <Link
-            className="nav-item"
-            to="resumePanel"
-            //={handleOnClick}
-            offset={dynamicOffset}
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-          >
-            Resume
+
+          <Link to="/" className={"nav-item"}>
+            <p className={"nav-item"} onClick={() => setScrollToResume(true)}>
+              Resume
+            </p>
           </Link>
-          <Link
-            className="nav-item"
-            to="portfolioPanel"
-            onClick={handleOnClick}
-            offset={dynamicOffset}
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-          >
-            Portfolio
+
+          <Link to="/" className={"nav-item"}>
+            <p
+              className={"nav-item"}
+              onClick={() => setScrollToPortfolio(true)}
+            >
+              Portfolio
+            </p>
           </Link>
-          <Link
-            className="nav-item"
-            to="contactPanel"
-            //onClick={handleOnClick}
-            offset={dynamicOffset}
-            spy={true}
-            smooth={true}
-            duration={scrollDuration}
-          >
-            Contact
+
+          <Link to="/" className={"nav-item"}>
+            <p className={"nav-item"} onClick={() => setScrollToContact(true)}>
+              Contact
+            </p>
           </Link>
           <button onClick={handleModalOpen} className="nav-item">
             Stay Updated
