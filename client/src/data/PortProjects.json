@@ -1,4 +1,9 @@
 {
+  "portfolioSite": {
+    "category": "software",
+    "title": "Portfolio Site",
+    "skills": ["AWS", "React"]
+  },
   "socialTracker": {
     "category": "software",
     "title": "Social Tracker",
@@ -7,50 +12,22 @@
       "src": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png",
       "alt": "SocialTracker Logo"
     },
-    "path": "/social-tracker",
-    "sections": {
-      "Overview": {
-        "title": "Social Tracker",
-        "description": "Discord bot that records and store's a user's daily growth on various social media platforms.",
-        "details": {
-          "Role": "Creator",
-          "Purpose": "Personal Project",
-          "Date": "May 2020",
-          "Link": {
-            "img": "https://raw.githubusercontent.com/arcasoy/Portfolio/main/client/src/assets/images/githubLogo.svg",
-            "alt": "GitHub Logo",
-            "destination": "https://github.com/arcasoy/SocialTracker"
-          }
-        }
-      },
-      "Problem": {
-        "type": "blurb",
-        "content": {
-          "p": "Many organizations and individuals that use social media tend to use follower count as a metric to determine their reach to potential customers or fans. Many social media platforms have their own tools to visualize growth metrics, but there are few tools to analyze growth on a wide range of platforms."
-        }
-      },
-      "Requirements": {
-        "type": "ul",
-        "content": {
-          "1": "Include many popular social media platforms such as YouTube, Twitter, Instagram, and Twitch",
-          "2": "Automatically collect follower count data each day",
-          "3": "Return graphed growth metrics to drive content selection"
-        }
-      }
-    }
+    "path": "/social-tracker"
+  },
+  "TDS": {
+    "category": "software",
+    "title": "TDS Website",
+    "skills": ["OAuth2", "API Calls", "Wix Velo"],
+    "image": {
+      "src": "https://raw.githubusercontent.com/arcasoy/TDSWebDev/main/TDS%20Drip%20Purple.png",
+      "alt": "TDS Corporation Logo"
+    },
+    "path": "/tds-web-dev"
   },
   "footStretcher": {
     "category": "hardware",
     "title": "Foot Stretcher Optimization",
     "skills": ["SolidWorks", "FEA", "DFMEA"]
-  },
-  "portfolioSite": {
-    "category": "software",
-    "title": "Portfolio Site",
-    "skills": ["AWS", "React"]
-  },
-  "test1": {
-    "category": "software"
   },
   "test2": {
     "category": "software"

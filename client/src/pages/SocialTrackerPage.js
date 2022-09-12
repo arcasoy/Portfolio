@@ -1,9 +1,8 @@
 // Import packages
-import React from "react";
+import React, { useEffect } from "react";
 
 // Import components
 import PortPagePanel from "../components/PortPagePanel";
-import StyledButton from "../components/Button";
 
 // Import assets
 import STLogo from "../assets/images/portfolioItems/SocialTracker/SocialTracker_Logo_Transparent.png";
@@ -12,6 +11,9 @@ import STDB from "../assets/images/portfolioItems/SocialTracker/STDB.png";
 import STOverall from "../assets/images/portfolioItems/SocialTracker/STOverall.png";
 
 export default function SocialTrackerPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       {/* Overview panel */}
@@ -136,8 +138,8 @@ export default function SocialTrackerPage() {
         <div className="port-page-section-content-offset">
           <p>
             Developing SocialTracker was the first time I successfully deployed
-            a project using GCP and Plotly, calling APIs, and working with SQL
-            databases. This project, although not complete, gave me the
+            a standalone project using GCP and Plotly, calling APIs, and working
+            with SQL databases. This project, although not complete, gave me the
             opportunity to learn all of these topics and expand my knowledge
             base.
           </p>
@@ -156,7 +158,6 @@ export default function SocialTrackerPage() {
             followers, and access level configuration to ensure only desired
             users can adjust settings and view results.
           </p>
-          <StyledButton mode="dark">Back to Portfolio</StyledButton>
         </div>
       </PortPagePanel>
     </>
