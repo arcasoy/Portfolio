@@ -71,6 +71,7 @@ button {
   justify-content: center;
   text-align: center;
   background-color: #ffd801;
+  overflow-x: hidden;
 }
 
 #homepageHeadshot {
