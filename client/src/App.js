@@ -9,6 +9,7 @@ import "./assets/global.css";
 import HomePage from "./pages/HomePage";
 import SocialTrackerPage from "./pages/SocialTrackerPage";
 import TDSPage from "./pages/TDSPage";
+import ReliabilityTestPage from "./pages/ReliabilityTest";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -31,6 +32,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/social-tracker" element={<SocialTrackerPage />} />
             <Route path="/tds-web-dev" element={<TDSPage />} />
+            <Route path="/reliability-test" element={<ReliabilityTestPage />} />
           </Routes>
         </BrowserRouter>
         <Footer />

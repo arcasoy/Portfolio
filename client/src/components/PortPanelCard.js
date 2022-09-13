@@ -2,9 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
-// Import assets
-import defaultImage from "../assets/images/portfolioItems/marvin-meyer-SYTO3xs06fU-unsplash.jpg";
+import useImage from "../hooks/useImage";
 
 const StyledDiv = styled.div`
   diplay: block;
@@ -35,18 +33,28 @@ const HoverTextStyledDiv = styled.div`
 `;
 
 export default function PortPanelCard(props) {
-  let imageData = {};
-  let skillsContent = "";
+  const defaultImage = "portfolioItems/marvin-meyer-SYTO3xs06fU-unsplash.jpg";
 
+  // Image source
+  const { loading, error, image } = useImage(
+    typeof props.content.image != "undefined" &&
+      typeof props.content.image.src != "undefined"
+      ? props.content.image.src
+      : defaultImage
+  );
+
+  //Image alt
+  let imageAlt;
+  if (typeof props.content.image != "undefined") {
+    imageAlt = props.content.image;
+  } else {
+    imageAlt = "Default project image";
+  }
+
+  //Card Skills
+  let skillsContent = "";
   if (typeof props.content.skills != "undefined")
     skillsContent = props.content.skills.join(" | ");
-
-  if (typeof props.content.image != "undefined") {
-    imageData = props.content.image;
-  } else {
-    imageData.src = defaultImage;
-    imageData.alt = "Default project image";
-  }
 
   return (
     <Link
@@ -55,10 +63,10 @@ export default function PortPanelCard(props) {
     >
       <StyledDiv className="port-panel-card">
         <img
-          src={imageData.src}
-          alt={imageData.alt}
+          src={image}
+          alt={imageAlt}
           style={{
-            objectFit: "cover",
+            objectFit: "contain",
             width: "100%",
             height: "100%",
             display: "block",

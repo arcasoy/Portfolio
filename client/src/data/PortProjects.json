@@ -29,7 +29,14 @@
     "title": "Foot Stretcher Optimization",
     "skills": ["SolidWorks", "FEA", "DFMEA"]
   },
-  "test2": {
-    "category": "software"
+  "reliabilityTest": {
+    "category": "hardware",
+    "title": "Reliability Test Design",
+    "skills": ["Mechanical Design", "Systems Engineering", "JavaScript"],
+    "image": {
+      "src": "portfolioItems/Fresenius/IMG_20190628_114051.png",
+      "alt": "Mechanical Reliability Test Fixture"
+    },
+    "path": "/reliability-test"
   }
 }
