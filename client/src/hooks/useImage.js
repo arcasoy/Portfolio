@@ -1,4 +1,6 @@
 // Source: https://stackoverflow.com/questions/53775936/import-image-dynamically-in-react-component
+// Modified to identify URL based assets versus local assets and load them accordingly
+// Alex Arcasoy
 
 import { useEffect, useState } from "react";
 
