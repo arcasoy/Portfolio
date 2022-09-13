@@ -5,9 +5,9 @@ import React, { useEffect } from "react";
 import PortPagePanel from "../components/PortPagePanel";
 
 // Import assets
-import TDSLogo from "../assets/images/portfolioItems/TDS/TDS Drip Purple.png";
-import TDSStreamers from "../assets/images/portfolioItems/TDS/TDS LiveStreamers.png";
-import TDSTeam from "../assets/images/portfolioItems/TDS/tdsTeam.png";
+import FresArrow from "../assets/images/portfolioItems/Fresenius/IMG_20190628_114051-1.png";
+import FresFixture from "../assets/images/portfolioItems/Fresenius/IMG_20190628_114051.png";
+import FresVid from "../assets/images/portfolioItems/Fresenius/04 - VID_20190607_105522.mp4";
 
 export default function TDSPage() {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function TDSPage() {
       {/* Overview panel */}
       <PortPagePanel mode="off-white">
         <h3 style={{ marginTop: "25px" }} className="port-page-section-title">
-          TDS Website
+          Reliability <br /> Test Design
         </h3>
         <div
           style={{
@@ -30,31 +30,29 @@ export default function TDSPage() {
           className="port-page-section-content-offset"
         >
           <p>
-            Web design and content management for "Team Damaged Souls" esports
-            team with dynamic elements determined by API calls and content
-            management systems.
+            Design a reliability test and corresponding test fixtures for a
+            peristaltic pump subassembly in a dialysis cycler.
           </p>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>
               <p className="overview-details-title">Role</p>
-              <p className="overview-details-content">Creator</p>
+              <p className="overview-details-content">
+                Systems Engineering Co-Op
+              </p>
             </div>
             <div>
-              <p className="overview-details-title">Purpose</p>
-              <p className="overview-details-content">Personal Project</p>
+              <p className="overview-details-title">Team</p>
+              <p className="overview-details-content">
+                Test & Systems Engineering
+              </p>
+            </div>
+            <div>
+              <p className="overview-details-title">Company</p>
+              <p className="overview-details-content">Fresenius Medical Care</p>
             </div>
             <div>
               <p className="overview-details-title">Date</p>
-              <p className="overview-details-content">Dec. 2019</p>
-            </div>
-            <div>
-              <p className="overview-details-title">Link</p>
-              <a href="https://github.com/arcasoy/TDSWebDev">
-                <img
-                  src="https://raw.githubusercontent.com/arcasoy/Portfolio/main/client/src/assets/images/githubLogo.svg"
-                  alt="GitHub Logo"
-                ></img>
-              </a>
+              <p className="overview-details-content">March 2019</p>
             </div>
           </div>
         </div>
@@ -63,113 +61,99 @@ export default function TDSPage() {
       <PortPagePanel>
         <img
           style={{ maxHeight: "350px", margin: "auto" }}
-          src={TDSLogo}
+          src={FresFixture}
           alt="Social Tracker Logo"
         ></img>
       </PortPagePanel>
-      {/* Problem panel */}
+      {/* Reliability Test Requirements panel */}
       <PortPagePanel mode="off-white">
-        <h3 className="port-page-section-title">Problem</h3>
-        <div className="port-page-section-content-offset">
-          <p>
-            An esports team I was involved with required a website to promote
-            themselves and generate merchandise sales. As the only individual
-            with technical experience, I took on the task of developing the
-            website.
-          </p>
-        </div>
-      </PortPagePanel>
-      {/* Requirements panel */}
-      <PortPagePanel>
-        <h3 className="port-page-section-title">Requirements</h3>
+        <h3 className="port-page-section-title">
+          Reliability Test
+          <br /> Requirements
+        </h3>
         <div className="port-page-section-content-offset">
           <ul>
-            <li>Engage visitors with the team content and culture</li>
-            <li>Generate revenue by managing merchandise sales</li>
             <li>
-              Redirect visitors to team members personal social media accounts
+              Test must simulate wear on subassembly equivalent to 7-year
+              product life
             </li>
             <li>
-              Utilize a CMS to allow for site editing by individuals without
-              programming experience
+              Test must account for all mechanical and electrical failure modes
+              outlined in DFMEA document
             </li>
+            <li>
+              Test design must account for wear on replaceable pump tubing
+            </li>
+            <li>Test must log test data in the case of a failure</li>
+            <li>Test fixture must be relatively compact</li>
           </ul>
         </div>
       </PortPagePanel>
-      {/* Developed Features panel */}
-      <PortPagePanel mode="off-white">
-        <h3 className="port-page-section-title">Developed {<br />} Features</h3>
+      {/* System Constraints panel */}
+      <PortPagePanel>
+        <h3 className="port-page-section-title">
+          System <br /> Constraints
+        </h3>
         <div className="port-page-section-content-offset">
-          <p>
-            I utilized Wix to decrease development time while still allowing for
-            custom elements. The following elements were created using Wix's
-            built-in IDE.
-          </p>
+          <ul>
+            <li>
+              Fluid delivery from 7 years of pumping at the maximum treatments
+              per day corresponds to 584 days of continuous pumping at maximum
+              pump speed
+            </li>
+            <li>Pump tubing wears out after about 72 hours of pumping</li>
+            <li>
+              Cyler software not tuned to determine if the pump stalls or stops
+            </li>
+            <li>
+              Pump rotation resulted in a 1mm linear actuation on another part
+            </li>
+          </ul>
         </div>
         <div className="port-page-section-content-center">
-          <h5 style={{ textAlign: "center" }}>Dynamic Twitch Streamers Page</h5>
-          <p>
-            As with any team, the promotion of the team and the care for each
-            member are of the utmost importance. To highlight our content
-            creators, I created a dynamic page that lists all team members that
-            are currently live streaming, shown below.{" "}
-          </p>
           <img
-            src={TDSStreamers}
-            alt="Screenshot of webpage with panels for each currently live streamer, their name, stream description, viewer count, and a link to their Twitch page"
-            style={{ objectFit: "contain", width: "85%" }}
+            src={FresArrow}
+            alt="Reliability fixture with red arrow showing axis of motion"
           ></img>
-          <figcaption>TDS Live Streams Page</figcaption>
-          <p>
-            I accessed the Twitch Teams API by going through the OAuth
-            Authentication flow, then calling the 'users' property to get an
-            array of users on the team, which is constantly changing. I
-            concatenated each username to one URL that was fetched and returned
-            with the data of all live members, such as thumbnail, current
-            viewers, and description. This data was then inserted to a
-            relational database and called on the front-end to populate a
-            repeating element.
-          </p>
-          <br />
-          <h5 style={{ textAlign: "center" }}>Members Pages</h5>
-          <p>
-            Visitors can also find a static page with the current team members.
-            The "Members" pages filter a database for the particular division of
-            each page, then populated a repeating element with the data such as
-            an image, title, social media links, and a description.
-          </p>
-          <img
-            src={TDSTeam}
-            alt="List of members with social media links and bios for each member"
-          ></img>
-          <figcaption>TDS Leadership Page</figcaption>
+          <figcaption>
+            Arrow denoting axis of 1mm actuation to be logged
+          </figcaption>
         </div>
       </PortPagePanel>
-      {/* Result Work */}
-      <PortPagePanel>
-        <h3 className="port-page-section-title">Result</h3>
-        <div className="port-page-section-content-offset">
+      {/* Fixture & Script panel */}
+      <PortPagePanel mode="off-white">
+        <h3 className="port-page-section-title">Fixture & Script</h3>
+        <div className="port-page-section-content-offset"></div>
+        <div className="port-page-section-content-center">
           <p>
-            The development of this site, although built using Wix, gave me the
-            opportunity to use OAuth2, build in relational databases that drive
-            front-end elements, and balance the needs of a business while
-            creating impressive features. I'm proud to say that the TDS website
-            holds up against the sites of large esports teams such as Team Solo
-            Mid and Rouge, drives upwards of 300 viewers a month, and has
-            generated over $750 in revenue.
+            The peristaltic pump subassembly could stall during testing due to a
+            multitude of factors, resulting in 0 mL/min fluid delivery. If not
+            stopped immediately, running the pump under these failure cases
+            could lead to wear unrealistic to normal use.
           </p>
-          <br />
           <p>
-            The development of these features has greatly reduced the time
-            required to onboard, reorganize, and add descriptors for new
-            members. Since development, others on leadership have been taught
-            how use the content management database to manage the team roster.
+            To ensure that the reliability test would proceed without any
+            unrealistic damage to the subassembly, the 1mm linear actuation that
+            corresponded to proper pump operation was tracked.
           </p>
-          <br />
+          <video autoPlay={true} loop={true} style={{ maxWidth: "500px" }}>
+            <source src={FresVid} type="video/mp4" />
+            Sorry, your browser doesn't support embedded videos.
+          </video>
           <p>
-            Please visit my GitHub repository if you have any interest in
-            viewing the code snippets that drive the previous two examples,
-            linked in the overview section above.
+            To track this motion, I created a fixture that amplified the motion
+            of the shaft by a factor of 2.5. This fixture was tracked with two
+            photo-interrupt optical sensors and compared to the most recent pump
+            command using onboard cycler test software that I created using
+            JavaScript.
+          </p>
+          <p>
+            If the optical sensors did not register motion once the test had
+            begun, the test knew the pump subassembly was in a failure state.
+            The caught error would command the pump to stop, log all remaining
+            data, and terminate the test script. In addition to error detection,
+            the script stepped operators through the test procedure and
+            monitored leak detection and data logging.
           </p>
         </div>
       </PortPagePanel>

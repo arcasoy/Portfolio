@@ -9,7 +9,7 @@
     "title": "Social Tracker",
     "skills": ["GCP", "JavaScript", "SQL"],
     "image": {
-      "src": "https://raw.githubusercontent.com/arcasoy/SocialTracker/master/SocialTracker%20Logo%20Transparent.png",
+      "src": "portfolioItems/SocialTracker/SocialTracker_Logo_Transparent.png",
       "alt": "SocialTracker Logo"
     },
     "path": "/social-tracker"
@@ -19,7 +19,7 @@
     "title": "TDS Website",
     "skills": ["OAuth2", "API Calls", "Wix Velo"],
     "image": {
-      "src": "https://raw.githubusercontent.com/arcasoy/TDSWebDev/main/TDS%20Drip%20Purple.png",
+      "src": "portfolioItems/TDS/TDS Drip Purple.png",
       "alt": "TDS Corporation Logo"
     },
     "path": "/tds-web-dev"
