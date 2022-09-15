@@ -73,7 +73,7 @@ const HomePage = forwardRef((props, ref) => {
           id="about-panel-wrapper"
           style={{ maxWidth: "1000px", margin: "auto" }}
         >
-          <h4>Nice to meet you. I'm a Mechanical Engineer based in Boston.</h4>
+          <h4>Nice to meet you. I'm an Engineer based in Boston.</h4>
           <StyledHeadshot
             src={headshot}
             id="homepageHeadshot"

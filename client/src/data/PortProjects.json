@@ -27,7 +27,12 @@
   "footStretcher": {
     "category": "hardware",
     "title": "Foot Stretcher Optimization",
-    "skills": ["SolidWorks", "FEA", "DFMEA"]
+    "skills": ["SolidWorks", "FEA", "DFMEA"],
+    "image": {
+      "src": "portfolioItems/HydrowFootStretcher/Final_FEA_edited-removebg-preview.png",
+      "alt": "Foot Stretcher Finite Element Analysis"
+    },
+    "path": "/foot-stretcher"
   },
   "reliabilityTest": {
     "category": "hardware",

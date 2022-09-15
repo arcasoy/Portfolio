@@ -9,7 +9,7 @@ import FresArrow from "../assets/images/portfolioItems/Fresenius/IMG_20190628_11
 import FresFixture from "../assets/images/portfolioItems/Fresenius/IMG_20190628_114051.png";
 import FresVid from "../assets/images/portfolioItems/Fresenius/04 - VID_20190607_105522.mp4";
 
-export default function TDSPage() {
+export default function ReliabilityTestPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });

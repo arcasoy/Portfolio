@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 
 //Import context
 import { GlobalStateContext } from "./context/globalState";
+import FootStretcherPage from "./pages/FootStretcher";
 
 function App() {
   const [scrollDynamicOffset, setScrollDynamicOffset] = useState(0);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/social-tracker" element={<SocialTrackerPage />} />
             <Route path="/tds-web-dev" element={<TDSPage />} />
             <Route path="/reliability-test" element={<ReliabilityTestPage />} />
+            <Route path="/foot-stretcher" element={<FootStretcherPage />} />
           </Routes>
         </BrowserRouter>
         <Footer />
