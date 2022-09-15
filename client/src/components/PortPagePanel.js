@@ -10,8 +10,8 @@ const PortPagePanel = styled.div`
   text-align: left;
 
   width: 100%;
-  max-width: 1250px;
-  padding: 20px 100%;
+  padding: 20px 10%;
+  box-sizing: border-box;
   ${(props) => {
     switch (props.mode) {
       case "off-white":
