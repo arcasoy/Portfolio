@@ -9,7 +9,8 @@ import "./assets/global.css";
 import HomePage from "./pages/HomePage";
 import SocialTrackerPage from "./pages/SocialTrackerPage";
 import TDSPage from "./pages/TDSPage";
-import ReliabilityTestPage from "./pages/ReliabilityTest";
+import ReliabilityTestPage from "./pages/ReliabilityTestPage";
+import NEUCapstonePage from "./pages/NEUCapstonePage";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -17,7 +18,7 @@ import Footer from "./components/Footer";
 
 //Import context
 import { GlobalStateContext } from "./context/globalState";
-import FootStretcherPage from "./pages/FootStretcher";
+import FootStretcherPage from "./pages/FootStretcherPage";
 
 function App() {
   const [scrollDynamicOffset, setScrollDynamicOffset] = useState(0);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/tds-web-dev" element={<TDSPage />} />
             <Route path="/reliability-test" element={<ReliabilityTestPage />} />
             <Route path="/foot-stretcher" element={<FootStretcherPage />} />
+            <Route path="/neu-capstone" element={<NEUCapstonePage />} />
           </Routes>
         </BrowserRouter>
         <Footer />

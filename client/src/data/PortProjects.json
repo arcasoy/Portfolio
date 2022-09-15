@@ -24,6 +24,16 @@
     },
     "path": "/tds-web-dev"
   },
+  "N95": {
+    "category": "hardware",
+    "title": "N95 Mask with Integrated Nasal Cannula",
+    "skills": ["SolidWorks Surfacing", "Injection Molding", "SLA 3D Printing"],
+    "image": {
+      "src": "portfolioItems/NEUCapstone/Cannula  Transp.png",
+      "alt": "Capstone project: N95 mask with integrated nasal cannula"
+    },
+    "path": "/neu-capstone"
+  },
   "footStretcher": {
     "category": "hardware",
     "title": "Foot Stretcher Optimization",

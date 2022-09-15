@@ -30,6 +30,9 @@ const HoverTextStyledDiv = styled.div`
   height: 100%;
   z-index: 5;
   background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
 `;
 
 export default function PortPanelCard(props) {
@@ -74,8 +77,12 @@ export default function PortPanelCard(props) {
           }}
         ></img>
         <HoverTextStyledDiv>
-          <h5>{props.content.title}</h5>
-          <p>{skillsContent}</p>
+          <div style={{ margin: "auto" }}>
+            <p style={{ fontWeight: "bold", fontSize: "25px" }}>
+              {props.content.title}
+            </p>
+            <p>{skillsContent}</p>
+          </div>
         </HoverTextStyledDiv>
       </StyledDiv>
     </Link>

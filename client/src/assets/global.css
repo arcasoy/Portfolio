@@ -274,11 +274,12 @@ button {
   margin: auto;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 65%;
 }
 
 .port-page-section-content-center img {
   width: 85%;
   object-fit: contain;
-  border: 5px solid #ffd801;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
 }
