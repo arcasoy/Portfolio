@@ -1,9 +1,4 @@
 {
-  "portfolioSite": {
-    "category": "software",
-    "title": "Portfolio Site",
-    "skills": ["AWS", "React"]
-  },
   "socialTracker": {
     "category": "software",
     "title": "Social Tracker",

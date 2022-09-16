@@ -95,24 +95,21 @@ const HomePage = forwardRef((props, ref) => {
               Thank you for viewing my portfolio! I graduated from Northeastern
               University in 2021 with degrees in Mechanical Engineering (B.S.) &
               Engineering Management (M.S.). I currently live in Boston while
-              working as a mechanical engineer for Advent Technologies in the
-              automation group. <br /> <br />
-              I chose to study mechanical engineering because it is a broad
-              field that would give me the tools to solve any problem, from
-              medical devices at Fresenius Medical, to fitness equipment at
-              Hydrow, to automated test and manufacturing systems at Blackstone
-              Valley Engineering. My background in design, controls, and test &
-              systems provides me with the skill set to develop, automate, and
-              validate new and existing products. <br /> <br />
-              My goal is to work on projects where I can apply my breadth of
-              mechanical and programming knowledge to create or improve upon
-              electro-mechanical systems. I value being a well-rounded engineer
-              to apply my problem-solving skills to interdisciplinary fields.
-              For this reason I have been developing programming and management
-              skills beyond the classroom by incorporating them into my personal
-              projects. <br /> <br />
-              I, in fact, value being well-rounded in all aspects of my life.
-              When I'm not working, I enjoy competitive rowing, working out,
+              working as a controls engineer for Advent Technologies in the
+              automation group. <br /> <br />I chose to study mechanical
+              engineering because it is a broad field that would give me the
+              problems solving skills and tools for any scenario, from medical
+              devices to fitness equipment to automated test and manufacturing
+              equipment. My background in design, controls, and test & systems
+              provides me with the skill set to develop, automate, and validate
+              new and existing products. <br /> <br />
+              As I've widdened my breadth of skills throughout my career, I've
+              developed a deep interest in software, finding myself working on a
+              myriad of related projects in my free time. My goal is to work as
+              a software engineer, applying my experience programming automated
+              manufacturing equipment and personal projects. <br />
+              <br />
+              When I'm not working, I enjoy competitive rowing, cycling,
               camping, cooking, photography, and taking on personal projects to
               learn more! Drop me a line if you have any exciting projects you'd
               like to collaborate on!
