@@ -62,7 +62,7 @@ export default function TDSPage() {
       {/* Image panel */}
       <PortPagePanel>
         <img
-          style={{ maxHeight: "350px", margin: "auto" }}
+          className="image-panel-img"
           src={TDSLogo}
           alt="Social Tracker Logo"
         ></img>

@@ -95,7 +95,7 @@ export default function NEUCapstonePage() {
       {/* Image panel */}
       <PortPagePanel>
         <img
-          style={{ maxHeight: "350px", margin: "auto" }}
+          className="image-panel-img"
           src={MaskTransparent}
           alt="Mask final product"
         ></img>

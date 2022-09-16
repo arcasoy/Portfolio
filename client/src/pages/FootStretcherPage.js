@@ -72,8 +72,8 @@ export default function FootStretcherPage() {
       {/* Image panel */}
       <PortPagePanel>
         <img
-          style={{ maxHeight: "350px", margin: "auto" }}
           src={FootStretcherImg}
+          className="image-panel-img"
           alt="Original Foot Stretcher Subassembly CAD"
         ></img>
       </PortPagePanel>

@@ -60,7 +60,7 @@ export default function ReliabilityTestPage() {
       {/* Image panel */}
       <PortPagePanel>
         <img
-          style={{ maxHeight: "350px", margin: "auto" }}
+          className="image-panel-img"
           src={FresFixture}
           alt="Social Tracker Logo"
         ></img>

@@ -62,7 +62,7 @@ export default function SocialTrackerPage() {
       {/* Image panel */}
       <PortPagePanel>
         <img
-          style={{ maxHeight: "350px", margin: "auto" }}
+          className="image-panel-img"
           src={STLogo}
           alt="Social Tracker Logo"
         ></img>

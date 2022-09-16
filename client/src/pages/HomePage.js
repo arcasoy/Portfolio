@@ -20,14 +20,6 @@ import Parallax from "../components/Parallax";
 import HomePanel from "../components/HomePanel";
 import StyledButton from "../components/Button";
 import PortPanelCardViewer from "../components/PortPanelCardViewer";
-import {
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
 
 //Import Context
 import { GlobalStateContext } from "../context/globalState";
@@ -38,11 +30,12 @@ const StyledHeadshot = styled.img`
   border: solid;
   border-color: #ffd801;
   border-width: 7.5px;
-  max-width: 400px;
+
+  width: 60%;
 `;
 
 const StyledPanelP = styled.p`
-  font-size: 25px;
+  font-size: clamp(14px, 5vw, 25px);
 `;
 
 const HomePage = forwardRef((props, ref) => {
@@ -66,14 +59,18 @@ const HomePage = forwardRef((props, ref) => {
     <>
       <Parallax
         imgPath="wenhao-ryan-zGx9P250WaE-unsplash.jpg"
-        aspectRatio="3"
+        aspectRatio="2.5"
+        name="true"
       />
       <HomePanel id="aboutPanel">
         <div
           id="about-panel-wrapper"
           style={{ maxWidth: "1000px", margin: "auto" }}
         >
-          <h4>Nice to meet you. I'm an Engineer based in Boston.</h4>
+          <h4>
+            Nice to meet you. I'm an <br />
+            Engineer based in Boston.
+          </h4>
           <StyledHeadshot
             src={headshot}
             id="homepageHeadshot"

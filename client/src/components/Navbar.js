@@ -57,6 +57,10 @@ const StyledNavbar = styled.div`
     margin: auto;
   }
 
+  button.nav-item {
+    padding: 8px;
+  }
+
   .nav-item:hover {
     color: #ffd801;
     transition: color 500ms;
@@ -75,7 +79,7 @@ const StyledNavbar = styled.div`
     bottom: 0;
   }
 
-  @media all and (max-width: 1112px) {
+  @media all and (max-width: 1140px) {
     #nav-flex-elements {
       flex-direction: column;
     }
@@ -104,7 +108,7 @@ const ReactModalStyles = {
     right: "0",
     width: "90%",
     maxWidth: "500px",
-    aspectRatio: "16/9",
+    //aspectRatio: "16/9",
     borderWidth: "10px",
     borderColor: "#ffd801",
     margin: "auto",
