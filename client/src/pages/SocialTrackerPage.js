@@ -31,8 +31,8 @@ export default function SocialTrackerPage() {
           className="port-page-section-content-offset"
         >
           <p>
-            Discord bot that records and store's a user's daily growth on
-            various social media platforms.
+            Discord bot that records and stores a user's daily growth on various
+            social media platforms.
           </p>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <div>

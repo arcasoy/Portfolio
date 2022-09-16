@@ -109,6 +109,8 @@ const ReactModalStyles = {
     width: "90%",
     maxWidth: "500px",
     //aspectRatio: "16/9",
+    maxHeight: "40%",
+    overflow: "auto",
     borderWidth: "10px",
     borderColor: "#ffd801",
     margin: "auto",
@@ -277,11 +279,13 @@ export default function Navbar(props) {
             opacity: "0.5",
           }}
         ></img>
-        <h4 style={{ color: "white", zIndex: 10 }}>Stay Updated</h4>
+        <h4 style={{ color: "white", zIndex: 10, textAlign: "center" }}>
+          Stay Updated
+        </h4>
         <p style={{ color: "white", textAlign: "center", zIndex: 10 }}>
           Add your email to hear about Alex's project and website updates!
         </p>
-        <form style={{ display: "block", zIndex: 10 }}>
+        <form style={{ display: "block", zIndex: 10, textAlign: "center" }}>
           <input
             type="text"
             placeholder="Email"
