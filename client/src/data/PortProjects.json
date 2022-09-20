@@ -1,4 +1,14 @@
 {
+  "BVE": {
+    "category": "software",
+    "title": "BVE Controls Engineering",
+    "skills": ["State Machines", "OOP", "System Design"],
+    "image": {
+      "src": "portfolioItems/BVE/Assembly-Machine.png",
+      "alt": "Sample industrial automation cell"
+    },
+    "path": "/bve"
+  },
   "socialTracker": {
     "category": "software",
     "title": "Social Tracker",
