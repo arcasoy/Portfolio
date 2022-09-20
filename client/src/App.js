@@ -12,6 +12,7 @@ import TDSPage from "./pages/TDSPage";
 import ReliabilityTestPage from "./pages/ReliabilityTestPage";
 import NEUCapstonePage from "./pages/NEUCapstonePage";
 import BVEPage from "./pages/BVEPage";
+import PortfolioSitePage from "./pages/PortfolioSitePage";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/foot-stretcher" element={<FootStretcherPage />} />
             <Route path="/neu-capstone" element={<NEUCapstonePage />} />
             <Route path="/bve" element={<BVEPage />} />
+            <Route path="/portfolio" element={<PortfolioSitePage />} />
           </Routes>
         </BrowserRouter>
         <Footer />
