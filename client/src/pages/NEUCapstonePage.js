@@ -4,17 +4,6 @@ import React, { useEffect } from "react";
 // Import components
 import PortPagePanel from "../components/PortPagePanel";
 
-// Import assets (old assets)
-import FootStretcherImg from "../assets/images/portfolioItems/HydrowFootStretcher/Footstretcher.png";
-import HydrowWithArrows from "../assets/images/portfolioItems/HydrowFootStretcher/Hydrow-Busy-Body-Arrows.png";
-import FEAFinalIso from "../assets/images/portfolioItems/HydrowFootStretcher/Final FEA_edited.jpg";
-import FEAOrigIso from "../assets/images/portfolioItems/HydrowFootStretcher/original FEA.png";
-import suspendedWeight from "../assets/images/portfolioItems/HydrowFootStretcher/suspendedweight_edited.jpg";
-import suspendWeightTop from "../assets/images/portfolioItems/HydrowFootStretcher/suspend weight top down.png";
-import pressModSketch from "../assets/images/portfolioItems/HydrowFootStretcher/hydraulic press.png";
-import pressMore from "../assets/images/portfolioItems/HydrowFootStretcher/press more.jpg";
-import FEAFinalBottom from "../assets/images/portfolioItems/HydrowFootStretcher/bottom final fea_edited.jpg";
-
 // Import assets
 import MaskTransparent from "../assets/images/portfolioItems/NEUCapstone/Cannula  Transp.png";
 import BrainstormBarbed from "../assets/images/portfolioItems/NEUCapstone/barbed.png";

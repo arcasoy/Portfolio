@@ -11,6 +11,7 @@ import SocialTrackerPage from "./pages/SocialTrackerPage";
 import TDSPage from "./pages/TDSPage";
 import ReliabilityTestPage from "./pages/ReliabilityTestPage";
 import NEUCapstonePage from "./pages/NEUCapstonePage";
+import BVEPage from "./pages/BVEPage";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -37,6 +38,7 @@ function App() {
             <Route path="/reliability-test" element={<ReliabilityTestPage />} />
             <Route path="/foot-stretcher" element={<FootStretcherPage />} />
             <Route path="/neu-capstone" element={<NEUCapstonePage />} />
+            <Route path="/bve" element={<BVEPage />} />
           </Routes>
         </BrowserRouter>
         <Footer />
