@@ -57,6 +57,10 @@ const StyledNavbar = styled.div`
     margin: auto;
   }
 
+  button.nav-item {
+    padding: 8px;
+  }
+
   .nav-item:hover {
     color: #ffd801;
     transition: color 500ms;
@@ -75,7 +79,7 @@ const StyledNavbar = styled.div`
     bottom: 0;
   }
 
-  @media all and (max-width: 1112px) {
+  @media all and (max-width: 1140px) {
     #nav-flex-elements {
       flex-direction: column;
     }
@@ -104,7 +108,9 @@ const ReactModalStyles = {
     right: "0",
     width: "90%",
     maxWidth: "500px",
-    aspectRatio: "16/9",
+    //aspectRatio: "16/9",
+    maxHeight: "40%",
+    overflow: "auto",
     borderWidth: "10px",
     borderColor: "#ffd801",
     margin: "auto",
@@ -273,11 +279,13 @@ export default function Navbar(props) {
             opacity: "0.5",
           }}
         ></img>
-        <h4 style={{ color: "white", zIndex: 10 }}>Stay Updated</h4>
+        <h4 style={{ color: "white", zIndex: 10, textAlign: "center" }}>
+          Stay Updated
+        </h4>
         <p style={{ color: "white", textAlign: "center", zIndex: 10 }}>
           Add your email to hear about Alex's project and website updates!
         </p>
-        <form style={{ display: "block", zIndex: 10 }}>
+        <form style={{ display: "block", zIndex: 10, textAlign: "center" }}>
           <input
             type="text"
             placeholder="Email"
