@@ -4,12 +4,6 @@ import React, { useEffect } from "react";
 // Import components
 import PortPagePanel from "../components/PortPagePanel";
 
-// Import assets (old)
-import STLogo from "../assets/images/portfolioItems/SocialTracker/SocialTracker_Logo_Transparent.png";
-import STChange from "../assets/images/portfolioItems/SocialTracker/STChange.png";
-import STDB from "../assets/images/portfolioItems/SocialTracker/STDB.png";
-import STOverall from "../assets/images/portfolioItems/SocialTracker/STOverall.png";
-
 // Import assets
 import SampleAutomation from "../assets/images/portfolioItems/BVE/Assembly-Machine.png";
 import PackMLStates from "../assets/images/portfolioItems/BVE/PACKML Chart Updated 2019.png";
