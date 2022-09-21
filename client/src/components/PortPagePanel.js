@@ -28,6 +28,16 @@ const PortPagePanel = styled.div`
     font-size: 25px;
   }
 
+  a.overview-details-content {
+    margin: 8px;
+  }
+
+  .overview-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .image-panel-img {
     max-width: 350px;
     min-width: 100px;
@@ -72,6 +82,11 @@ const PortPagePanel = styled.div`
     .port-page-section-content-offset {
       align-items: center;
       margin: auto;
+    }
+
+    .overview-details {
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
   }
 `;

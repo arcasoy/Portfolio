@@ -41,7 +41,7 @@ export default function FootStretcherPage() {
             Evaluate and strengthen foot stretcher subassembly, a key structural
             component, to reduce maximum stress and improve fatigue life.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">
