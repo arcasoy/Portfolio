@@ -51,7 +51,7 @@ export default function NEUCapstonePage() {
             exist since the cannula tubing breaks the seal of the mask,
             rendering it useless.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">

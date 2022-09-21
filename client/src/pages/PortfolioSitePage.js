@@ -37,7 +37,7 @@ export default function BVEPage() {
             Website developed to display samples of work and collect
             communications.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">Full-Stack Developer</p>
@@ -52,7 +52,10 @@ export default function BVEPage() {
             </div>
             <div>
               <p className="overview-details-title">Link</p>
-              <a href="https://github.com/arcasoy/Portfolio">
+              <a
+                className="overview-details-content"
+                href="https://github.com/arcasoy/Portfolio"
+              >
                 <img
                   src="https://raw.githubusercontent.com/arcasoy/Portfolio/main/client/src/assets/images/githubLogo.svg"
                   alt="GitHub Logo"

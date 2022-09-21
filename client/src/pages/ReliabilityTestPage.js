@@ -33,7 +33,7 @@ export default function ReliabilityTestPage() {
             Design a reliability test and corresponding test fixtures for a
             peristaltic pump subassembly in a dialysis cycler.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">

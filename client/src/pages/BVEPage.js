@@ -36,7 +36,7 @@ export default function BVEPage() {
             including manufacturing and testing equipment. Disclaimer: Details
             of projects under NDA.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">Controls Engineer</p>

@@ -34,7 +34,7 @@ export default function SocialTrackerPage() {
             Discord bot that records and stores a user's daily growth on various
             social media platforms.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">Creator</p>
@@ -49,7 +49,10 @@ export default function SocialTrackerPage() {
             </div>
             <div>
               <p className="overview-details-title">Link</p>
-              <a href="https://github.com/arcasoy/SocialTracker">
+              <a
+                className="overview-details-content"
+                href="https://github.com/arcasoy/SocialTracker"
+              >
                 <img
                   src="https://raw.githubusercontent.com/arcasoy/Portfolio/main/client/src/assets/images/githubLogo.svg"
                   alt="GitHub Logo"
