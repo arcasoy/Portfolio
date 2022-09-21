@@ -75,6 +75,7 @@ const HomePage = forwardRef((props, ref) => {
             src={headshot}
             id="homepageHeadshot"
             alt="Headshot of Alex"
+            style={{ aspectRatio: "1 / 1" }}
           ></StyledHeadshot>
           <h4>
             I'm passionate about optimizing systems, automated processes, and
@@ -169,14 +170,30 @@ const HomePage = forwardRef((props, ref) => {
             alignItems: "center",
           }}
         >
-          <input type="text" placeholder="Name" className="contact-input" />
-          <input type="text" placeholder="Email" className="contact-input" />
-          <input type="text" placeholder="Subject" className="contact-input" />
+          <input
+            type="text"
+            placeholder="Name"
+            className="contact-input"
+            aria-label="Name input"
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            className="contact-input"
+            aria-label="Email input"
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            className="contact-input"
+            aria-label="Subject input"
+          />
           <textarea
             type="text"
             placeholder="Type your message here..."
             rows="5"
             className="contact-input"
+            aria-label="Message input"
           ></textarea>
           <StyledButton
             type="submit"
