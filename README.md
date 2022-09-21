@@ -20,13 +20,13 @@ I'm undecided on the backend stack. Considering it will have few calls/month, FA
   - [x] About Me section
   - [x] Button component
   - [x] Stay Updated Modal
-  - [ ] Projects pages
+  - [x] Projects pages
   - [ ] Mobile hamburger menu
 - [ ] Fill portfolio content
 - [ ] Form functionality
   - [ ] Contact form
   - [ ] Stay Updated form
-- [ ] Hosting
+- [x] Hosting
 
 ## Bugs
 
