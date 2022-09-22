@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  useImperativeHandle,
-  forwardRef,
-  useContext,
-} from "react";
+import React, { useState, forwardRef, useContext } from "react";
 import Toggle from "react-toggle";
 import styled from "styled-components";
 
@@ -31,11 +24,21 @@ const StyledHeadshot = styled.img`
   border-color: #ffd801;
   border-width: 7.5px;
 
-  width: 60%;
+  width: 40%;
 `;
 
 const StyledPanelP = styled.p`
   font-size: clamp(14px, 5vw, 25px);
+`;
+
+const StyledLearnMoreDiv = styled.div`
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
 `;
 
 const HomePage = forwardRef((props, ref) => {
@@ -81,12 +84,10 @@ const HomePage = forwardRef((props, ref) => {
             I'm passionate about optimizing systems, automated processes, and
             project-based learning.
           </h4>
-          <div
+          <StyledLearnMoreDiv
             id="learn-more-content"
             style={{
               display: learnMoreToggle ? "flex" : "none",
-              flexDirection: "row",
-              alignItems: "center",
             }}
           >
             <p style={{ textAlign: "left" }}>
@@ -116,13 +117,17 @@ const HomePage = forwardRef((props, ref) => {
               <img
                 src={rowing}
                 alt="Alex racing an 8+ for CRI at US Rowing Club Nationals 2021"
-                style={{ maxWidth: "100%" }}
+                style={{
+                  maxWidth: "200px",
+                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                  borderRadius: "5px",
+                }}
               ></img>
               <figcaption>
                 Racing an 8+ at US Rowing Club Nationals 2021
               </figcaption>
             </div>
-          </div>
+          </StyledLearnMoreDiv>
           <StyledButton onClick={handleLearnMoreClick}>
             {learnMoreToggle ? "See Less" : "Learn More"}
           </StyledButton>
