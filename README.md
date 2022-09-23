@@ -12,7 +12,7 @@ I'm undecided on the backend stack. Considering it will have few calls/month, FA
 
 ## ToDo
 
-- [ ] Design
+- [x] Design
   - [x] Navbar
   - [x] Favicon & Title
   - [x] Footer
@@ -20,13 +20,13 @@ I'm undecided on the backend stack. Considering it will have few calls/month, FA
   - [x] About Me section
   - [x] Button component
   - [x] Stay Updated Modal
-  - [ ] Projects pages
-  - [ ] Mobile hamburger menu
+  - [x] Projects pages
+  - [x] Mobile hamburger menu
 - [ ] Fill portfolio content
 - [ ] Form functionality
   - [ ] Contact form
   - [ ] Stay Updated form
-- [ ] Hosting
+- [x] Hosting
 
 ## Bugs
 
