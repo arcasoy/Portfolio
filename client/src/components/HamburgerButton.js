@@ -75,7 +75,6 @@ const StyledDiv = styled.div`
 export default function HamburgerButton() {
   const handleHamburgerToggle = () => {
     let navItems = document.getElementById("nav-links");
-    console.log(navItems);
     navItems.classList.toggle("hamburgerHide");
   };
 
