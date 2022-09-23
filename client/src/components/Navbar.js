@@ -6,6 +6,7 @@ import ReactModal from "react-modal";
 
 //Import Components
 import StyledButton from "../components/Button";
+import HamburgerButton from "./HamburgerButton";
 
 //Import Context
 import { globalState, GlobalStateContext } from "../context/globalState";
@@ -40,7 +41,10 @@ const StyledNavbar = styled.div`
     visibility: hidden;
   }
 
-  #nav-links {
+  // #nav-links {
+  //   display: flex;
+  // }
+  .nav-links-class {
     display: flex;
   }
 
@@ -79,9 +83,14 @@ const StyledNavbar = styled.div`
     bottom: 0;
   }
 
+  #nav-hamburger {
+    display: none;
+  }
+
   @media all and (max-width: 1140px) {
     #nav-flex-elements {
       flex-direction: column;
+      width: 100%;
     }
     #nav-links {
       flex-direction: column;
@@ -91,6 +100,19 @@ const StyledNavbar = styled.div`
     }
     #nav-balance-logo {
       display: none;
+    }
+    #nav-hamburger {
+      display: inline;
+    }
+    .hamburgerHide {
+      display: none;
+    }
+    #nav-mobile-top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
     }
   }
 `;
@@ -140,6 +162,7 @@ const StayUpdatedEmailStyle = {
 
 export default function Navbar(props) {
   const [modalOpen, setModalOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   // Global State Context
   const { scrollDynamicOffset, setScrollDynamicOffset } =
@@ -159,13 +182,19 @@ export default function Navbar(props) {
       //setDynamicOffset in global state context
       setScrollDynamicOffset(-nav.clientHeight);
     };
+    //function to get window width
+    const getWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+    };
     // run on window resize
     window.addEventListener("resize", () => {
       getNavbarHeight();
+      getWindowWidth();
     });
     // run on window load
     window.addEventListener("load", () => {
       getNavbarHeight();
+      getWindowWidth();
     });
   }, [scrollDynamicOffset, setScrollDynamicOffset]);
 
@@ -178,7 +207,7 @@ export default function Navbar(props) {
       window.scrollTo(0, scrollDest);
     };
 
-    // Timeout 100ms to ensure screen paints
+    // Timeout 200ms to ensure screen paints
     setTimeout(() => {
       if (scrollToHome) {
         handleScroll(document.getElementsByClassName("App")[0]);
@@ -193,7 +222,7 @@ export default function Navbar(props) {
         handleScroll(document.getElementById("contactPanel"));
         setScrollToContact(false);
       }
-    }, 100);
+    }, 200);
   }, [
     scrollToHome,
     scrollToResume,
@@ -201,6 +230,13 @@ export default function Navbar(props) {
     scrollToContact,
     scrollDynamicOffset,
   ]);
+
+  useEffect(() => {
+    if (windowWidth > 1140) {
+      let navItems = document.getElementById("nav-links");
+      navItems.classList.add("hamburgerHide");
+    }
+  }, [windowWidth]);
 
   const handleModalOpen = () => {
     setModalOpen(true);
@@ -213,14 +249,17 @@ export default function Navbar(props) {
   return (
     <StyledNavbar id="main-nav">
       <div id="nav-flex-elements">
-        <a href="/" id="nav-logo-link">
-          <img
-            src={logo}
-            id="nav-logo"
-            alt="Alex's Logo, two sideways A's formatted similar to HTML tags"
-          ></img>
-        </a>
-        <div id="nav-links">
+        <div id="nav-mobile-top">
+          <a href="/" id="nav-logo-link">
+            <img
+              src={logo}
+              id="nav-logo"
+              alt="Alex's Logo, two sideways A's formatted similar to HTML tags"
+            ></img>
+          </a>
+          <HamburgerButton />
+        </div>
+        <div id="nav-links" className="nav-links-class">
           <Link to="/" className={"nav-item"}>
             <p className={"nav-item"} onClick={() => setScrollToHome(true)}>
               Home
