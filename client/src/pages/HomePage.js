@@ -24,7 +24,7 @@ const StyledHeadshot = styled.img`
   border-color: #ffd801;
   border-width: 7.5px;
 
-  width: 40%;
+  width: 45%;
 `;
 
 const StyledPanelP = styled.p`
