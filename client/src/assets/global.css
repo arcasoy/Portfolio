@@ -2,12 +2,14 @@
   font-family: "Lulo-Clean";
   src: local("Lulo-Clean"),
     url("./fonts/Lulo\ Clean\ W01\ One\ Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Futura";
   src: local("Futura"),
     url("./fonts/Futura\ LT\ W01\ Book.ttf") format("truetype");
+  font-display: swap;
 }
 
 html {

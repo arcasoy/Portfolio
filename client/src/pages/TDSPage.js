@@ -34,7 +34,7 @@ export default function TDSPage() {
             team with dynamic elements determined by API calls and content
             management systems.
           </p>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="overview-details">
             <div>
               <p className="overview-details-title">Role</p>
               <p className="overview-details-content">Creator</p>
@@ -49,7 +49,10 @@ export default function TDSPage() {
             </div>
             <div>
               <p className="overview-details-title">Link</p>
-              <a href="https://github.com/arcasoy/TDSWebDev">
+              <a
+                className="overview-details-content"
+                href="https://github.com/arcasoy/TDSWebDev"
+              >
                 <img
                   src="https://raw.githubusercontent.com/arcasoy/Portfolio/main/client/src/assets/images/githubLogo.svg"
                   alt="GitHub Logo"

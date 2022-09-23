@@ -41,16 +41,25 @@ export default function Footer() {
             gap: "1em",
           }}
         >
-          <a href="https://github.com/arcasoy">
+          <a href="https://github.com/arcasoy" aria-label="GitHub profile link">
             <RiGithubFill className="footer-icon" />
           </a>
-          <a href="https://www.linkedin.com/in/alexander-arcasoy/">
+          <a
+            href="https://www.linkedin.com/in/alexander-arcasoy/"
+            aria-label="LinkedIn profile link"
+          >
             <RiLinkedinFill className="footer-icon" />
           </a>
-          <a href="https://twitter.com/arcasoi">
+          <a
+            href="https://twitter.com/arcasoi"
+            aria-label="Twitter profile link"
+          >
             <RiTwitterFill className="footer-icon" />
           </a>
-          <a href="https://www.instagram.com/arcasoi/">
+          <a
+            href="https://www.instagram.com/arcasoi/"
+            aria-label="Instagram profile link"
+          >
             <RiInstagramLine className="footer-icon" />
           </a>
         </div>

@@ -1,4 +1,14 @@
 {
+  "Portfolio": {
+    "category": "software",
+    "title": "Portfolio Website",
+    "skills": ["React", "AWS", "Node"],
+    "image": {
+      "src": "portfolioItems/PortfolioSite/AA.png",
+      "alt": "Alex's Logo"
+    },
+    "path": "/portfolio"
+  },
   "BVE": {
     "category": "software",
     "title": "BVE Controls Engineering",
