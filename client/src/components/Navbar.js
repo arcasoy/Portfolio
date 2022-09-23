@@ -259,7 +259,7 @@ export default function Navbar(props) {
           </a>
           <HamburgerButton />
         </div>
-        <div id="nav-links" className="nav-links-class">
+        <div id="nav-links" className="nav-links-class hamburgerHide">
           <Link to="/" className={"nav-item"}>
             <p className={"nav-item"} onClick={() => setScrollToHome(true)}>
               Home
