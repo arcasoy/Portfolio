@@ -50,12 +50,50 @@ const HomePage = forwardRef((props, ref) => {
   const [portPanelToggle, setPortPanelToggle] = useState(true);
   const [learnMoreToggle, setLearnMoreToggle] = useState(false);
 
+  // contact form states
+  const [formName, setFormName] = useState("");
+  const [formEmail, setFormEmail] = useState("");
+  const [formSubject, setFormSubject] = useState("");
+  const [formMsg, setFormMsg] = useState("");
+
   const handlePortPanelToggle = () => {
     setPortPanelToggle(!portPanelToggle);
   };
 
   const handleLearnMoreClick = () => {
     setLearnMoreToggle(!learnMoreToggle);
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    console.log(e);
+
+    try {
+      let res = await fetch(
+        "https://saozakhsz5.execute-api.us-east-1.amazonaws.com/PortfolioContact",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: formName,
+            email: formEmail,
+            subject: formSubject,
+            message: formMsg,
+          }),
+        }
+      );
+      let resJson = await res.json();
+      if (res.status === 200) {
+        setFormName("");
+        setFormEmail("");
+        setFormSubject("");
+        setFormMsg("Message Sent!");
+      } else {
+        setFormMsg("An error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    document.forms["contactForm"].reset();
   };
 
   return (
@@ -169,29 +207,41 @@ const HomePage = forwardRef((props, ref) => {
       <HomePanel id="contactPanel">
         <h2>Contact</h2>
         <form
+          name="contactForm"
+          id="contact-form"
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
           }}
+          //action="https://saozakhsz5.execute-api.us-east-1.amazonaws.com/PortfolioContact"
+          //method="POST"
+          target="contactPanel"
+          onSubmit={handleFormSubmit}
         >
           <input
             type="text"
             placeholder="Name"
             className="contact-input"
             aria-label="Name input"
+            value={formName}
+            onChange={(e) => setFormName(e.target.value)}
           />
           <input
             type="text"
             placeholder="Email"
             className="contact-input"
             aria-label="Email input"
+            value={formEmail}
+            onChange={(e) => setFormEmail(e.target.value)}
           />
           <input
             type="text"
             placeholder="Subject"
             className="contact-input"
             aria-label="Subject input"
+            value={formSubject}
+            onChange={(e) => setFormSubject(e.target.value)}
           />
           <textarea
             type="text"
@@ -199,6 +249,8 @@ const HomePage = forwardRef((props, ref) => {
             rows="5"
             className="contact-input"
             aria-label="Message input"
+            value={formMsg}
+            onChange={(e) => setFormMsg(e.target.value)}
           ></textarea>
           <StyledButton
             type="submit"
