@@ -1,0 +1,9 @@
+POST https://saozakhsz5.execute-api.us-east-1.amazonaws.com/PortfolioContact HTTP/1.1
+content-type: application/json
+
+{
+    "name": "AX",
+    "email": "axtv.me@gmail.com",
+    "subject": "Nice to email you!",
+    "message": "Howdy do!"
+}
