@@ -24,7 +24,7 @@ I'm undecided on the backend stack. Considering it will have few calls/month, FA
   - [x] Mobile hamburger menu
 - [ ] Fill portfolio content
 - [ ] Form functionality
-  - [ ] Contact form
+  - [x] Contact form
   - [ ] Stay Updated form
 - [x] Hosting
 
