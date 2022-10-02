@@ -140,7 +140,7 @@ const HomePage = forwardRef((props, ref) => {
               equipment. My background in design, controls, and test & systems
               provides me with the skill set to develop, automate, and validate
               new and existing products. <br /> <br />
-              As I've widdened my breadth of skills throughout my career, I've
+              As I've widened my breadth of skills throughout my career, I've
               developed a deep interest in software, finding myself working on a
               myriad of related projects in my free time. My goal is to work as
               a software engineer, applying my experience programming automated
