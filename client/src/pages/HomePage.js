@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 //Import assets
 import headshot from "../assets/images/headshot.jpg";
-import resume from "../assets/Alexander Arcasoy Resume 2021.pdf";
+import resume from "../assets/Alexander Arcasoy Resume 2022.pdf";
 import rowing from "../assets/images/ClubNats.jpg";
 //import "react-toggle/style.css";
 
