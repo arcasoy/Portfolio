@@ -8,6 +8,7 @@ import PortPagePanel from "../components/PortPagePanel";
 import AALogo from "../assets/images/portfolioItems/PortfolioSite/AA.png";
 import PortProjectsJSON from "../assets/images/portfolioItems/PortfolioSite/PortProjectsJSON.PNG";
 import ContactFormAWS from "../assets/images/portfolioItems/PortfolioSite/ContactFormAWS.PNG";
+import StayUpdatedAWS from "../assets/images/portfolioItems/PortfolioSite/StayUpdatedAWS.PNG";
 
 export default function BVEPage() {
   useEffect(() => {
@@ -173,12 +174,30 @@ export default function BVEPage() {
           </p>
           <img
             src={ContactFormAWS}
-            alt="AWS Architecture for Contact Form"
+            alt="AWS architecture for contact form"
           ></img>
           <h5>Stay Updated</h5>
           <p>
-            Coming soon... implementing this with AWS Simple Notification System
-            (SNS).
+            To be able to reach individuals who opt into staying updated with
+            additions to this site, I needed to save emails their emails to
+            contact them in the future. I used API Gateway and Lambda again to
+            handle the API call from the site. I had options to store the data
+            though, through AWS's RDS, S3, SES contact lists, and others.
+            <br /> <br />
+            To speed up launch, I decided to save the data in S3 as objects
+            straight from the API call rather. On the API Gateway trigger,
+            Lambda processes the body of the message and calls PushObject on the
+            stay upated bucket to log the new email, shown below.
+          </p>
+          <img
+            src={StayUpdatedAWS}
+            alt="AWS architectrure for stay updated feature"
+          ></img>
+          <p>
+            Going forward, I may utilize AWS SES's contact list feature to
+            manage subscriptions and batch send emails if the number of
+            subscribers justifies it, rather than storing emails in an S3 bucket
+            and manually adding them as recipients of an email.
           </p>
         </div>
       </PortPagePanel>
