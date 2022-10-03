@@ -179,10 +179,10 @@ export default function BVEPage() {
           <h5>Stay Updated</h5>
           <p>
             To be able to reach individuals who opt into staying updated with
-            additions to this site, I needed to save emails their emails to
-            contact them in the future. I used API Gateway and Lambda again to
-            handle the API call from the site. I had options to store the data
-            though, through AWS's RDS, S3, SES contact lists, and others.
+            additions to this site, I needed to save their emails to contact
+            them in the future. I used API Gateway and Lambda again to handle
+            the API call from the site. I had options to store the data though,
+            through AWS's RDS, S3, SES contact lists, and others.
             <br /> <br />
             To speed up launch, I decided to save the data in S3 as objects
             straight from the API call rather. On the API Gateway trigger,
