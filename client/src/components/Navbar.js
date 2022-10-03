@@ -174,6 +174,9 @@ export default function Navbar(props) {
   const [scrollToPortfolio, setScrollToPortfolio] = useState(false);
   const [scrollToContact, setScrollToContact] = useState(false);
 
+  //Stay Updated form state
+  const [stayUpdatedEmail, setStayUpdatedEmail] = useState("");
+
   // Get navbar height
   useEffect(() => {
     //function for running state setting
@@ -244,6 +247,32 @@ export default function Navbar(props) {
 
   const handleModalClose = () => {
     setModalOpen(false);
+  };
+
+  const handleStayUpdatedSubmit = async (e) => {
+    e.preventDefault();
+    console.log(e);
+
+    try {
+      let res = await fetch(
+        "https://xu574u0gvl.execute-api.us-east-1.amazonaws.com/default/portfolioNewSubscriber",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email: stayUpdatedEmail,
+          }),
+        }
+      );
+      let resJson = await res.json();
+      if (res.status === 200) {
+        setStayUpdatedEmail("Email Saved!");
+      } else {
+        setStayUpdatedEmail("An error occured");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    document.forms["modal-form"].reset();
   };
 
   return (
@@ -324,11 +353,18 @@ export default function Navbar(props) {
         <p style={{ color: "white", textAlign: "center", zIndex: 10 }}>
           Add your email to hear about Alex's project and website updates!
         </p>
-        <form style={{ display: "block", zIndex: 10, textAlign: "center" }}>
+        <form
+          style={{ display: "block", zIndex: 10, textAlign: "center" }}
+          onSubmit={handleStayUpdatedSubmit}
+          id="modal-form"
+          name="modal-form"
+        >
           <input
             type="text"
             placeholder="Email"
             style={StayUpdatedEmailStyle}
+            value={stayUpdatedEmail}
+            onChange={(e) => setStayUpdatedEmail(e.target.value)}
           ></input>
           <StyledButton type="submit">Submit</StyledButton>
         </form>
