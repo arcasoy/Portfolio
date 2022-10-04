@@ -8,7 +8,7 @@ Frontend was built with React
 
 ## Backend
 
-I'm undecided on the backend stack. Considering it will have few calls/month, FAAS might be the way to go.
+Backend used FaaS through AWS API Gateway, Lambda, SES, and S3 to create the contact form and stay updated logic. Since there are likely only a handful of calls per month, this was the most time and cost effective way of setting up the business logic of the website.
 
 ## ToDo
 
@@ -22,10 +22,10 @@ I'm undecided on the backend stack. Considering it will have few calls/month, FA
   - [x] Stay Updated Modal
   - [x] Projects pages
   - [x] Mobile hamburger menu
-- [ ] Fill portfolio content
-- [ ] Form functionality
+- [x] Fill portfolio content
+- [x] Form functionality
   - [x] Contact form
-  - [ ] Stay Updated form
+  - [x] Stay Updated form
 - [x] Hosting
 
 ## Bugs
