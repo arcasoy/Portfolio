@@ -13,6 +13,7 @@ import ReliabilityTestPage from "./pages/ReliabilityTestPage";
 import NEUCapstonePage from "./pages/NEUCapstonePage";
 import BVEPage from "./pages/BVEPage";
 import PortfolioSitePage from "./pages/PortfolioSitePage";
+import XLogoPage from "./pages/XLogoPage";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -41,6 +42,7 @@ function App() {
             <Route path="/neu-capstone" element={<NEUCapstonePage />} />
             <Route path="/bve" element={<BVEPage />} />
             <Route path="/portfolio" element={<PortfolioSitePage />} />
+            <Route path="/x" element={<XLogoPage />} />
           </Routes>
         </BrowserRouter>
         <Footer />
