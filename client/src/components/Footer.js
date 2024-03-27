@@ -64,7 +64,7 @@ export default function Footer() {
           </a>
         </div>
       </IconContext.Provider>
-      <p>© 2019-2022 by Alexander Arcasoy. All rights reserved.</p>
+      <p>© 2019-2023 by Alexander Arcasoy. All rights reserved.</p>
     </HomePanel>
   );
 }
