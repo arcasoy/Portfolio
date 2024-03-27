@@ -7,7 +7,7 @@ Files: Mars_1_6792.glb [4.03MB] > Mars_1_6792-transformed.glb [132.13KB] (97%)
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function MarsModel(props: any) {
+export function MarsModel(props) {
   // @ts-ignore
   const { nodes, materials } = useGLTF("/Mars_1_6792.glb");
   return (

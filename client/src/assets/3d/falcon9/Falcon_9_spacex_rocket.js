@@ -10,7 +10,7 @@ Title: Falcon 9 SpaceX rocket
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function FalconModel(props: any) {
+export function FalconModel(props) {
   // @ts-ignore
   const { nodes, materials } = useGLTF("/falcon_9_spacex_rocket.glb");
   return (
