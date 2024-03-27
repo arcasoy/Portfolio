@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 //Import assets
 import headshot from "../assets/images/headshot.jpg";
-import resume from "../assets/Alexander Arcasoy Resume 2022.pdf";
-import rowing from "../assets/images/ClubNats.jpg";
+import resume from "../assets/Alexander Arcasoy Resume 2024.pdf";
+import snowboarding from "../assets/images/snowboarding.jpg";
 //import "react-toggle/style.css";
 
 //Import components
@@ -131,39 +131,38 @@ const HomePage = forwardRef((props, ref) => {
             <p style={{ textAlign: "left" }}>
               Thank you for viewing my portfolio! I graduated from Northeastern
               University in 2021 with degrees in Mechanical Engineering (B.S.) &
-              Engineering Management (M.S.). I currently live in Boston while
-              working as a controls engineer for Advent Technologies in the
-              automation group. <br /> <br />I chose to study mechanical
-              engineering because it is a broad field that would give me the
-              problems solving skills and tools for any scenario, from medical
-              devices to fitness equipment to automated test and manufacturing
-              equipment. My background in design, controls, and test & systems
-              provides me with the skill set to develop, automate, and validate
-              new and existing products. <br /> <br />
+              Engineering Management (M.S.). I currently live in Cambridge, MA
+              while working as a software engineer for Dover Corporation in the
+              3D Platform group. <br /> <br />I chose to study mechanical
+              engineering because of it's wide range of applications, skills,
+              and tools that have equipt me to problem solve in any scenario,
+              from medical devices to fitness equipment to automated test and
+              manufacturing equipment. My background in provides me with the
+              skill set to develop, automate, and validate new and existing
+              products, working best at the intersection of the physical and
+              digital world. <br /> <br />
               As I've widened my breadth of skills throughout my career, I've
-              developed a deep interest in software, finding myself working on a
-              myriad of related projects in my free time. My goal is to work as
-              a software engineer, applying my experience programming automated
-              manufacturing equipment and personal projects. <br />
+              also deepened my skillset in software, honing in on 3D web
+              development. My goal is to continue to sharpen my software skills
+              and apply my unique background to as many exciting challenges as
+              possible. <br />
               <br />
-              When I'm not working, I enjoy competitive rowing, cycling,
-              camping, cooking, photography, and taking on personal projects to
+              When I'm not working, I enjoy weightlifting, cycling, cooking,
+              electronic music, snowboarding, and taking on personal projects to
               learn more! Drop me a line if you have any exciting projects you'd
               like to collaborate on!
             </p>
             <div style={{ maxWidth: "100%" }}>
               <img
-                src={rowing}
-                alt="Alex racing an 8+ for CRI at US Rowing Club Nationals 2021"
+                src={snowboarding}
+                alt="Snow day in Killington, VT 2024"
                 style={{
                   maxWidth: "200px",
                   boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                   borderRadius: "5px",
                 }}
               ></img>
-              <figcaption>
-                Racing an 8+ at US Rowing Club Nationals 2021
-              </figcaption>
+              <figcaption>Snow day in Killington, VT 2024</figcaption>
             </div>
           </StyledLearnMoreDiv>
           <StyledButton onClick={handleLearnMoreClick}>

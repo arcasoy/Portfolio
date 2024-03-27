@@ -13,7 +13,8 @@ import ReliabilityTestPage from "./pages/ReliabilityTestPage";
 import NEUCapstonePage from "./pages/NEUCapstonePage";
 import BVEPage from "./pages/BVEPage";
 import PortfolioSitePage from "./pages/PortfolioSitePage";
-import XLogoPage from "./pages/XLogoPage";
+import XLogoPage from "./pages/XLogoPage/XLogoPage";
+import ThreePage from "./pages/three/ThreePage";
 
 //Import components
 import Navbar from "./components/Navbar";
@@ -43,6 +44,7 @@ function App() {
             <Route path="/bve" element={<BVEPage />} />
             <Route path="/portfolio" element={<PortfolioSitePage />} />
             <Route path="/x" element={<XLogoPage />} />
+            <Route path="/three" element={<ThreePage />} />
           </Routes>
         </BrowserRouter>
         <Footer />
